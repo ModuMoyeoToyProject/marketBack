@@ -1,0 +1,9 @@
+{% extends 'user/user_register.html' %}
+{% load static %}
+
+{% block form %}
+  <form method="post" action={% url 'userRegister' %}>{% csrf_token %}
+    {{form}}
+    <button class="signup_btn" type="submit"><a href={% url 'userInfo' %}>Submit</a></button>
+  </form>
+{% endblock %}
