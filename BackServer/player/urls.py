@@ -3,5 +3,5 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('<str:userSeq>', views.player_update)
+    path('<str:playerID>/action/fishing', views.player_update)
 ]

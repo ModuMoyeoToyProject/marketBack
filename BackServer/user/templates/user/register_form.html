@@ -1,9 +1,0 @@
-{% extends 'user/register_page.html' %}
-{% load static %}
-
-{% block register_form %}
-    <form method = "post" action = {% url 'userRegister' %}>{% csrf_token%}
-        {{form}}
-        <div class="btn" type="submit"><a href="#">작성완료</a></div>
-    </form>
-{% endblock %}
