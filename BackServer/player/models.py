@@ -1,13 +1,14 @@
 from django.db import models
+from account.models import Account
 
 class PlayerCharacter(models.Model):
-    playerID = models.CharField(max_length=45, primary_key=True)
+    account = models.ForeignKey(Account, on_delete=models.CASCADE)
+    playerID = models.AutoField(primary_key=True)
     statusID = models.CharField(max_length=45)
-    jobID = models.CharField(max_length=45)
-    inventoryID = models.CharField(max_length=45)
-    level = models.IntegerField()
-    exp = models.IntegerField()
-    title = models.CharField(max_length=45)
+    jobID = models.CharField(max_length=45, null=True)
+    level = models.IntegerField(default=1)
+    exp = models.IntegerField(default=0)
+    title = models.CharField(max_length=45, null=True)
 
 class Status(models.Model):
     statusID = models.CharField(max_length=45, primary_key=True)
@@ -29,6 +30,7 @@ class Status(models.Model):
     debuffID = models.IntegerField()
 
 class Inventory(models.Model):
-    inventoryID = models.CharField(max_length=45, primary_key=True)
-    weight = models.IntegerField()
-    quantity = models.IntegerField()
+    playerCharacter = models.ForeignKey(PlayerCharacter, on_delete=models.CASCADE)
+    inventoryID = models.AutoField(primary_key=True)
+    weight = models.IntegerField(null=True)
+    quantity = models.IntegerField(default=0)

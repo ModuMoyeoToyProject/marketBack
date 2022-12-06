@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from player.models import PlayerCharacter, Inventory
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate
 from django.http import JsonResponse
@@ -20,6 +21,7 @@ def register(request):
             response['type'] = 'user info already exists'
             return JsonResponse(response)
         else:
+            #계정 생성
             register_account = Account(username=username,
                                        gender=gender,
                                        name=name,
@@ -27,6 +29,17 @@ def register(request):
                                        password=password,
                                        email=email)
             register_account.save()
+
+            #캐릭터 생성
+            player_character = PlayerCharacter(account=register_account)
+            print(type(player_character))
+            player_character.save()
+
+            #인벤토리 생성
+            player_inventory = Inventory(playerCharacter=player_character)
+            print(type(player_inventory))
+            player_inventory.save()
+
             response['result'] = 'successful'
             return JsonResponse(response)
 
