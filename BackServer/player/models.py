@@ -4,6 +4,7 @@ from account.models import Account
 class PlayerCharacter(models.Model):
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
     playerID = models.AutoField(primary_key=True)
+    inventory = models.ForeignKey('player.Inventory', on_delete=models.CASCADE)
     statusID = models.CharField(max_length=45)
     jobID = models.CharField(max_length=45, null=True)
     level = models.IntegerField(default=1)
@@ -29,8 +30,14 @@ class Status(models.Model):
     buffID = models.IntegerField()
     debuffID = models.IntegerField()
 
+
 class Inventory(models.Model):
-    playerCharacter = models.ForeignKey(PlayerCharacter, on_delete=models.CASCADE)
     inventoryID = models.AutoField(primary_key=True)
+    itemStored = models.ForeignKey('player.ItemStored', on_delete=models.CASCADE)
     weight = models.IntegerField(null=True)
     quantity = models.IntegerField(default=0)
+
+class ItemStored(models.Model):
+    ItemStoredID = models.AutoField(primary_key=True)
+    item = models.ForeignKey('db.Fish', on_delete=models.PROTECT)
+    count = 0

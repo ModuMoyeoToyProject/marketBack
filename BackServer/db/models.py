@@ -29,3 +29,10 @@ class Building(models.Model):
     mapID = models.CharField(max_length=45)
     buildingImgPath = models.CharField(max_length=45)
     darkModeYn = models.CharField(max_length=45)
+
+class Fish(models.Model):
+    fishID = models.CharField(max_length=45, primary_key=True)
+    fishName = models.CharField(max_length=45)
+    sellingValue = models.IntegerField()
+    buyingValue = models.IntegerField()
+    exp = models.IntegerField()
