@@ -7,6 +7,7 @@ from .models import Account
 
 @csrf_exempt
 def register(request):
+    response = dict()
     if request.method == 'POST':
         name = request.POST.get('username')
         gender = request.POST.get('sex')
@@ -17,35 +18,37 @@ def register(request):
 
         print(name, gender, username, id, password, email)
 
-        response = dict()
-        try:
-            register_account = Account(username=username,
-                                       gender=gender,
-                                       name=name,
-                                       id=id,
-                                       password=password,
-                                       email=email)
-            register_account.save()
+        playerInventory = Inventory()
+        playerInventory.save()
 
-            player_character = PlayerCharacter(account=register_account)
-            print(type(player_character))
-            player_character.save()
+        playerCharacter = PlayerCharacter(inventory=playerInventory)
+        playerCharacter.save()
 
-            # #인벤토리 생성
-            # player_inventory = Inventory(playerCharacter=player_character)
-            # print(type(player_inventory))
-            # player_inventory.save()
+        register_account = Account(username=username,
+                                   gender=gender,
+                                   name=name,
+                                   id=id,
+                                   password=password,
+                                   email=email,
+                                   playerCharacter=playerCharacter)
+        register_account.save()
 
-            response['result'] = 'successful'
-            return JsonResponse(response)
-        except:
-            if Account.objects.filter(name=name, id=id, email=email).exists():
-                response['result'] = 'unsuccessful'
-                response['type'] = 'user info already exists'
-                return JsonResponse(response)
+        # #인벤토리 생성
+        # player_inventory = Inventory(playerCharacter=player_character)
+        # print(type(player_inventory))
+        # player_inventory.save()
 
-            response['result'] = 'unsuccessful'
-            return JsonResponse(response)
+        response['result'] = 'successful'
+        return JsonResponse(response)
+        # except:
+        #     print('no success')
+        #     if Account.objects.filter(name=name, id=id, email=email).exists():
+        #         response['result'] = 'unsuccessful'
+        #         response['type'] = 'user info already exists'
+        #         return JsonResponse(response)
+        #
+        #     response['result'] = 'unsuccessful'
+        #     return JsonResponse(response)
 
 
 

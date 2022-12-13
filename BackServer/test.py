@@ -10,18 +10,25 @@ from db.models import Fish
 import requests
 import json
 
-# print(Account.objects.values())
-# print(PlayerCharacter.objects.values())
+# test_player = Account(id='test', email='test@g', name='testy', gender='female', username='TEST', password='TESTY')
+# test_player.save()
+#
+# playerCharacter = PlayerCharacter()
+# playerCharacter.save()
+# test = Account(id='test', email='test@test', name='test', gender='test', username='test', password='test', playerCharacter=playerCharacter)
+# test.save()
+print(Account.objects.values())
+print(PlayerCharacter.objects.values())
 print(Inventory.objects.values())
-
-Account.objects.all().delete()
-PlayerCharacter.objects.all().delete()
-Inventory.objects.all().delete
+#
+# Account.objects.all().delete()
+# PlayerCharacter.objects.all().delete()
+# Inventory.objects.all().delete()
 
 # fish = Fish(fishID='#fish008', fishName='참돔', sellingValue=300, buyingValue=0, exp=3)
 # fish.save()
 # print(Fish.objects.values())
-
+#
 # example = {'id': '#fish008',
 #            'name': '참돔',
 #            'selling_value': 300,

@@ -33,6 +33,7 @@ class Building(models.Model):
 class Fish(models.Model):
     fishID = models.CharField(max_length=45, primary_key=True)
     fishName = models.CharField(max_length=45)
+    count = models.IntegerField(default=0)
     sellingValue = models.IntegerField()
     buyingValue = models.IntegerField()
     exp = models.IntegerField()

@@ -17,14 +17,13 @@ def player_farming(request):
 
 @csrf_exempt
 def player_fishing(request):
-    pass
-    # playerID = request.POST.get('playerID')
-    # fishID = request.POST.get('id')
-    # print(playerID)
-    # print(PlayerCharacter.objects.get(playerID=playerID).inventory)
-    # print(Fish.objects.get(fishID=fishID))
+    playerID = request.POST.get('playerID')
+    fishID = request.POST.get('id')
+    print(playerID)
+    print(PlayerCharacter.objects.get(playerID=playerID).inventory)
+    print(Fish.objects.get(fishID=fishID))
 
-    # return render(request, 'player/player_update.html')
+    return render(request, 'player/player_update.html')
 
 def player_buying(request):
     pass
