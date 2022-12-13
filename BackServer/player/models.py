@@ -33,11 +33,11 @@ class Status(models.Model):
 
 class Inventory(models.Model):
     inventoryID = models.AutoField(primary_key=True)
-    itemStored = models.ForeignKey('player.ItemStored', on_delete=models.CASCADE)
+    # itemStored = models.ForeignKey('player.ItemStored', on_delete=models.CASCADE)
     weight = models.IntegerField(null=True)
     quantity = models.IntegerField(default=0)
 
-class ItemStored(models.Model):
-    ItemStoredID = models.AutoField(primary_key=True)
-    item = models.ForeignKey('db.Fish', on_delete=models.PROTECT)
-    count = 0
+# class ItemStored(models.Model):
+#     ItemStoredID = models.AutoField(primary_key=True)
+#     item = models.ForeignKey('db.Fish', on_delete=models.PROTECT)
+#     count = 0

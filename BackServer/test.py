@@ -10,22 +10,23 @@ from db.models import Fish
 import requests
 import json
 
-print(Account.objects.values())
-print(PlayerCharacter.objects.values())
+# print(Account.objects.values())
+# print(PlayerCharacter.objects.values())
 print(Inventory.objects.values())
 
-# Account.objects.all().delete()
-# PlayerCharacter.objects.all().delete()
+Account.objects.all().delete()
+PlayerCharacter.objects.all().delete()
+Inventory.objects.all().delete
 
 # fish = Fish(fishID='#fish008', fishName='참돔', sellingValue=300, buyingValue=0, exp=3)
 # fish.save()
 # print(Fish.objects.values())
 
-example = {'id': '#fish008',
-           'name': '참돔',
-           'selling_value': 300,
-           'buying_value': 0,
-           'exp': 3,
-           'playerID': 3}
-response = requests.post('http://127.0.0.1:8000/game/player/action/fishing', example)
-print(response)
+# example = {'id': '#fish008',
+#            'name': '참돔',
+#            'selling_value': 300,
+#            'buying_value': 0,
+#            'exp': 3,
+#            'playerID': 3}
+# response = requests.post('http://127.0.0.1:8000/game/player/action/fishing', example)
+# print(response)

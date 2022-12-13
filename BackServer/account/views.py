@@ -15,13 +15,10 @@ def register(request):
         password = request.POST.get('psw')
         email = request.POST.get('email')
 
+        print(name, gender, username, id, password, email)
+
         response = dict()
-        if Account.objects.filter(name=name, id=id, email=email).exists():
-            response['result'] = 'unsuccessful'
-            response['type'] = 'user info already exists'
-            return JsonResponse(response)
-        else:
-            #계정 생성
+        try:
             register_account = Account(username=username,
                                        gender=gender,
                                        name=name,
@@ -30,18 +27,27 @@ def register(request):
                                        email=email)
             register_account.save()
 
-            #캐릭터 생성
             player_character = PlayerCharacter(account=register_account)
             print(type(player_character))
             player_character.save()
 
-            #인벤토리 생성
-            player_inventory = Inventory(playerCharacter=player_character)
-            print(type(player_inventory))
-            player_inventory.save()
+            # #인벤토리 생성
+            # player_inventory = Inventory(playerCharacter=player_character)
+            # print(type(player_inventory))
+            # player_inventory.save()
 
             response['result'] = 'successful'
             return JsonResponse(response)
+        except:
+            if Account.objects.filter(name=name, id=id, email=email).exists():
+                response['result'] = 'unsuccessful'
+                response['type'] = 'user info already exists'
+                return JsonResponse(response)
+
+            response['result'] = 'unsuccessful'
+            return JsonResponse(response)
+
+
 
 @csrf_exempt
 def login(request):

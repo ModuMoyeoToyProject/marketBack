@@ -7,5 +7,7 @@ urlpatterns = [
     path('action/harvesting', views.player_harvesting),
     path('action/taming', views.player_taming),
     path('action/farming', views.player_farming),
-    path('action/fishing', views.player_fishing)
+    path('action/fishing', views.player_fishing),
+    path('action/buying', views.player_buying),
+    path('action/selling', views.player_selling)
 ]
