@@ -1,11 +1,12 @@
 from django.db import models
 
-
 class Account(models.Model):
-    accountID = models.CharField(max_length=255, primary_key=True)
-    playerID = models.CharField(max_length=45, null=True)
+    accountID = models.AutoField(primary_key=True)
+    id = models.CharField(max_length=255, unique=True)
     email = models.CharField(max_length=255, unique=True)
-    name = models.CharField(max_length=255)  # 사람이름
+    name = models.CharField(max_length=255)
     gender = models.CharField(max_length=255)
-    username = models.CharField(max_length=255, unique=True)  # 계정아이디
+    username = models.CharField(max_length=255, unique=True)
     password = models.CharField(max_length=255)
+    playerCharacter = models.ForeignKey('player.PlayerCharacter', on_delete=models.CASCADE)
+

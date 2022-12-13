@@ -1,13 +1,13 @@
 from django.db import models
+from account.models import Account
 
 class PlayerCharacter(models.Model):
-    playerID = models.CharField(max_length=45, primary_key=True)
-    statusID = models.CharField(max_length=45)
-    jobID = models.CharField(max_length=45)
-    inventoryID = models.CharField(max_length=45)
-    level = models.IntegerField()
-    exp = models.IntegerField()
-    title = models.CharField(max_length=45)
+    inventory = models.ForeignKey('player.Inventory', on_delete=models.CASCADE)
+    statusID = models.CharField(max_length=45, default=1)
+    jobID = models.CharField(max_length=45, default=1)
+    level = models.IntegerField(default=1)
+    exp = models.IntegerField(default=0)
+    title = models.CharField(max_length=45, default=1)
 
 class Status(models.Model):
     statusID = models.CharField(max_length=45, primary_key=True)
@@ -28,7 +28,13 @@ class Status(models.Model):
     buffID = models.IntegerField()
     debuffID = models.IntegerField()
 
+
 class Inventory(models.Model):
-    inventoryID = models.CharField(max_length=45, primary_key=True)
-    weight = models.IntegerField()
-    quantity = models.IntegerField()
+    item = models.ForeignKey('db.Fish', on_delete=models.CASCADE, null=True)
+    weight = models.IntegerField(null=True)
+    quantity = models.IntegerField(default=0)
+
+# class ItemStored(models.Model):
+#     ItemStoredID = models.AutoField(primary_key=True)
+#     item = models.ForeignKey('db.Fish', on_delete=models.PROTECT)
+#     count = 0
