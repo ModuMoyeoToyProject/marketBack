@@ -18,10 +18,17 @@ def player_farming(request):
 @csrf_exempt
 def player_fishing(request):
     playerID = request.POST.get('playerID')
-    fishID = request.POST.get('id')
-    print(playerID)
-    print(PlayerCharacter.objects.get(playerID=playerID).inventory)
-    print(Fish.objects.get(fishID=fishID))
+    fishID, fishName = request.POST.get('fishID'), request.POST.get('name')
+    sellingValue, buyingValue, exp = request.POST.get('selling_value'), request.POST.get('buying_value'), request.POST.get('exp')
+    player_inventory = Inventory.objects.get(playerCharacter_id=playerID)
+
+    if Fish.objects.get(inventory=Inventory.objects.get(playerCharacter_id=playerID)):
+        fish = Fish.objects.get(inventory=Inventory.objects.get(playerCharacter_id=playerID))
+        fish.count += 1
+        fish.save()
+    else:
+        fish = Fish(fishID=fishID, fishName=fishName, sellingValue=sellingValue, buyingValue=buyingValue, exp=exp, inventory=player_inventory)
+        fish.save()
 
     return render(request, 'player/player_update.html')
 

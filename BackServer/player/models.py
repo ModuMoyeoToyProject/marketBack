@@ -2,7 +2,7 @@ from django.db import models
 from account.models import Account
 
 class PlayerCharacter(models.Model):
-    inventory = models.ForeignKey('player.Inventory', on_delete=models.CASCADE)
+    account = models.ForeignKey('account.Account', on_delete=models.PROTECT)
     statusID = models.CharField(max_length=45, default=1)
     jobID = models.CharField(max_length=45, default=1)
     level = models.IntegerField(default=1)
@@ -30,7 +30,7 @@ class Status(models.Model):
 
 
 class Inventory(models.Model):
-    item = models.ForeignKey('db.Fish', on_delete=models.CASCADE, null=True)
+    playerCharacter = models.ForeignKey('player.PlayerCharacter', on_delete=models.PROTECT)
     weight = models.IntegerField(null=True)
     quantity = models.IntegerField(default=0)
 

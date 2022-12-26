@@ -31,7 +31,8 @@ class Building(models.Model):
     darkModeYn = models.CharField(max_length=45)
 
 class Fish(models.Model):
-    fishID = models.CharField(max_length=45, primary_key=True)
+    fishID = models.CharField(max_length=45)
+    inventory = models.ForeignKey('player.inventory', on_delete=models.PROTECT, null=True)
     fishName = models.CharField(max_length=45)
     count = models.IntegerField(default=0)
     sellingValue = models.IntegerField()

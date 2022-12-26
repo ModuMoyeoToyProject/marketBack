@@ -3,5 +3,5 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('<str:userSeq>', views.system_update)
+    path('mapdata', views.map_data)
 ]

@@ -18,22 +18,21 @@ def register(request):
 
         print(name, gender, username, id, password, email)
 
-        playerInventory = Inventory()
-        playerInventory.save()
-
-        playerCharacter = PlayerCharacter(inventory=playerInventory)
-        playerCharacter.save()
-
         register_account = Account(username=username,
                                    gender=gender,
                                    name=name,
                                    id=id,
                                    password=password,
-                                   email=email,
-                                   playerCharacter=playerCharacter)
+                                   email=email)
         register_account.save()
 
-        # #인벤토리 생성
+        playerCharacter = PlayerCharacter(account=register_account)
+        playerCharacter.save()
+
+        playerInventory = Inventory(playerCharacter=playerCharacter)
+        playerInventory.save()
+
+    # #인벤토리 생성
         # player_inventory = Inventory(playerCharacter=player_character)
         # print(type(player_inventory))
         # player_inventory.save()
