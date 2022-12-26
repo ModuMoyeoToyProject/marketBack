@@ -29,11 +29,11 @@ class Date(models.Model):
     holidayYn = models.CharField(max_length=45)
 
 class Map(models.Model):
-    mapID = models.CharField(max_length=45, primary_key=True)
-    mapName = models.CharField(max_length=45)
-    mapImgPath = models.CharField(max_length=45)
-    mapMenu = models.CharField(max_length=45)
-    darkModeYn = models.CharField(max_length=45)
+    mapID = models.IntegerField()
+    location = models.CharField(max_length=255)
+    required_level = models.IntegerField()
+    coordinate = models.CharField(max_length=255)
+    street = models.CharField(max_length=255)
 
 class Bgm(models.Model):
     bgmID = models.CharField(max_length=45, primary_key=True)

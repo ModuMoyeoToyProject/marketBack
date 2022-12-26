@@ -8,5 +8,4 @@ class Account(models.Model):
     gender = models.CharField(max_length=255)
     username = models.CharField(max_length=255, unique=True)
     password = models.CharField(max_length=255)
-    playerCharacter = models.ForeignKey('player.PlayerCharacter', on_delete=models.CASCADE)
 
