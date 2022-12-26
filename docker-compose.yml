@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  marketback:
+    container_name: marketBack-django
+    build:
+      context: ${PWD}
+      dockerfile: Dockerfile
+    hostname: marketback-django
+    tty: true
+    stdin_open: true
+    ports:
+      - 8888:8000
+    volumes:
+      - ${PWD}:/workspace
+    environment:
+      - TZ=Asia/Seoul
+    # command: gunicorn WebApp.wsgi:application --bind 0.0.0.0:8000
