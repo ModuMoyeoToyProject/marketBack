@@ -1,0 +1,8 @@
+Person 1| Hey, how's it going?
+Person 2| Not great, I'm really stressed out with all the work I have to do.
+Person 1| Yeah, I know how that feels. What's been keeping you so busy?
+Person 2| I have a big project due at the end of the week and I'm struggling to get everything done on time.
+Person 1| Have you tried breaking it down into smaller tasks? That can make it feel more manageable.
+Person 2| Yeah, I've tried that, but I still feel overwhelmed.
+Person 1| Well, if you need any help, just let me know. I'm happy to lend a hand.
+Person 2| Thanks, I appreciate it. I'll definitely keep that in mind.

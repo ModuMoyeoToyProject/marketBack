@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from .models import PlayerCharacter, Inventory
-from db.models import Fish
+from db.models import ItemInfo, Item
 
 def player_hunting(request):
     return render(request, 'player/player_update.html')
@@ -17,18 +17,23 @@ def player_farming(request):
 
 @csrf_exempt
 def player_fishing(request):
-    playerID = request.POST.get('playerID')
-    fishID, fishName = request.POST.get('fishID'), request.POST.get('name')
-    sellingValue, buyingValue, exp = request.POST.get('selling_value'), request.POST.get('buying_value'), request.POST.get('exp')
-    player_inventory = Inventory.objects.get(playerCharacter_id=playerID)
+    #이벤트 종료 후 아이템 추가
+    playerID, itemID = int(request.POST.get('playerID')), request.POST.get('itemID')
+    item_info = ItemInfo.objects.get(itemID=itemID)
+    player_character = PlayerCharacter.objects.get(id=playerID)
+    player_inventory = Inventory.objects.get(playerCharacter=player_character)
+    item = Item(inventory=player_inventory,
+                itemID=item_info.itemID,
+                itemName=item_info.itemName,
+                itemType=item_info.itemType,
+                sellingValue=item_info.sellingValue,
+                buyingValue=item_info.buyingValue,
+                exp=item_info.exp)
+    item.save()
 
-    if Fish.objects.get(inventory=Inventory.objects.get(playerCharacter_id=playerID)):
-        fish = Fish.objects.get(inventory=Inventory.objects.get(playerCharacter_id=playerID))
-        fish.count += 1
-        fish.save()
-    else:
-        fish = Fish(fishID=fishID, fishName=fishName, sellingValue=sellingValue, buyingValue=buyingValue, exp=exp, inventory=player_inventory)
-        fish.save()
+    # 이벤트 종료 후 경험치 추가
+    player_character.exp += item.exp
+    player_character.save()
 
     return render(request, 'player/player_update.html')
 
