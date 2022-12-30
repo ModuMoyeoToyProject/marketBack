@@ -34,3 +34,16 @@ back쪽 레파지토리 + 나중에 합칠예정
 
 * Python 3.8.16
 * Django 4.1.1 (No LTS)
+
+## Visualize ER-Diagram
+### Docker
+1. Install dependencies.
+    ```
+    apt update && apt install -y graphviz
+    pip install django-extensions pydotplus # These are contained in the requirements.txt
+    ```
+2. Define `GRAPH_MODELS` in `settings.py`.
+3. Create Model Digram and save to png file.
+    ```
+    python manage.py graph_models -a -o myapp_models.png
+    ```
