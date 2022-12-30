@@ -30,6 +30,9 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
 1. VSCode에서 해당 컨테이너로 Attach 한다.
 
+### Django Admin page
+* [http://localhost:8000/admin/](http://localhost:8000/admin/)
+
 ## 시스템 요구사항
 
 * Python 3.8.16

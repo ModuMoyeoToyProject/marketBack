@@ -5,9 +5,10 @@ from django.http import JsonResponse
 from .models import *
 
 
-@csrf_exempt
+
+@csrf_exempt # TODO CSRF 예외 데코레이터 삭제할 수 있도록 공부...
 def register(request):
-    if request.method == 'POST':
+    if request.method == 'POST': # TODO 매번 API 마다 method == post 확인하는 로직 쓰지 말고 클래스뷰 공부해보기!
         response = dict()
         if request.POST['password1'] == request.POST['password2']:
             try:
@@ -18,14 +19,14 @@ def register(request):
                         email=request.POST['email'],
                         password=request.POST['password1'],
                     )
-                    auth.login(request, new_user)
+                    auth.login(request, new_user) # 회원가입과 동시에 로그인 처리
                     response['result'] = 'Successed'
                     # CreateCharactor(new_user)
                 else:
-                    response['result'] = 'AlreadyExists'
+                    response['result'] = 'AlreadyExists' # 같은 username이 이미 DB에 존재함
             except Exception as e:
                 print(e)
-                response['result'] = 'Failed'
+                response['result'] = 'Failed' # 어떤 알수없는 이유로 실패, Exception 정보는 보안상 response로 보내지 않음
         else:
             response['result'] = 'NotMatchedPassword'
         return JsonResponse(response)
@@ -52,9 +53,9 @@ def register(request):
 def login(request):
     if request.method == 'POST':
         response = dict()
-        user = auth.authenticate(request, username=request.POST['username'], password=request.POST['password'])
-        if user is not None and user.is_active:
-            auth.login(request, user)
+        user = auth.authenticate(request, username=request.POST['username'], password=request.POST['password']) # 사용자 입력 ID와 PW가 유효한지 체크
+        if user is not None and user.is_active: # user 객체가 정상적으로 생성되었다면 로그인정보가 유효하다는 뜻, is_active는 사용가능한 상태인지 확인
+            auth.login(request, user) # 로그인 처리
             response['result'] = 'SuccessedLogin'
         else:
             response['result'] = 'FailedLogin'
