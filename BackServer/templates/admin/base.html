@@ -2,7 +2,7 @@
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
 <head>
-<title>{% block title %}{% endblock %}</title>
+<title>시장놀이 데이터베이스 관리</title>
 <link rel="stylesheet" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
 {% block dark-mode-vars %}
   <link rel="stylesheet" href="{% static "admin/css/dark_mode.css" %}">
