@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from os.path import join
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-)8ovo-j5f$%5(9pw6k+yv&4u2wwg5$o-0$ldiwv)=*1$p_523k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -38,11 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'account',
-    'player',
-    'system',
-    'db',
+    'django_extensions',
+    'account.apps.AccountConfig',
+    'player.apps.PlayerConfig',
+    'system.apps.SystemConfig',
+    'db.apps.DbConfig',
+    # 단순히 bookmark 모듈 이름으로 등록할 수 있지만 bookmark.apps.BookmarkConfig 설정 클래스 이름으로 등록하는 것이 보다 정확한 방법이다.
 ]
+AUTH_USER_MODEL = 'account.User'
+AUTH_GROUP_MODEL = 'account.Group'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -56,14 +61,12 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware'
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
-
 ROOT_URLCONF = 'BackServer.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -112,9 +115,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -138,6 +141,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     "http://localhost:8080",
 #     "http://127.0.0.1:9000"
 # ]
-# 상황에 따라 모든 도메인에 대해서도 추가가 가능합니다
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = False
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}

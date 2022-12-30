@@ -1,37 +1,36 @@
-from django.shortcuts import render
-from player.models import PlayerCharacter, Inventory
+from player.models import Character, Inventory
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth import authenticate
+from django.contrib import auth
 from django.http import JsonResponse
-from .models import Account
+from .models import *
+
 
 @csrf_exempt
 def register(request):
-    response = dict()
     if request.method == 'POST':
-        name = request.POST.get('username')
-        gender = request.POST.get('sex')
-        username = request.POST.get('name')
-        id = request.POST.get('id')
-        password = request.POST.get('psw')
-        email = request.POST.get('email')
+        response = dict()
+        if request.POST['password1'] == request.POST['password2']:
+            try:
+                if not User.objects.filter(username=request.POST['username']).exists():
+                    new_user = User.objects.create_user(
+                        username=request.POST['username'],
+                        nickname=request.POST['nickname'],
+                        email=request.POST['email'],
+                        password=request.POST['password1'],
+                    )
+                    auth.login(request, new_user)
+                    response['result'] = 'Successed'
+                    # CreateCharactor(new_user)
+                else:
+                    response['result'] = 'AlreadyExists'
+            except Exception as e:
+                print(e)
+                response['result'] = 'Failed'
+        else:
+            response['result'] = 'NotMatchedPassword'
+        return JsonResponse(response)
 
-        print(name, gender, username, id, password, email)
-
-        register_account = Account(username=username,
-                                   gender=gender,
-                                   name=name,
-                                   id=id,
-                                   password=password,
-                                   email=email)
-        register_account.save()
-
-        playerCharacter = PlayerCharacter(account=register_account)
-        playerCharacter.save()
-
-        playerInventory = Inventory(playerCharacter=playerCharacter)
-        playerInventory.save()
-
+        
     # #인벤토리 생성
         # player_inventory = Inventory(playerCharacter=player_character)
         # print(type(player_inventory))
@@ -49,22 +48,14 @@ def register(request):
         #     response['result'] = 'unsuccessful'
         #     return JsonResponse(response)
 
-
-
 @csrf_exempt
 def login(request):
     if request.method == 'POST':
-        id = request.POST.get('username')
-        password = request.POST.get('psw')
-
         response = dict()
-        if Account.objects.filter(id=id, password=password).exists():
-            response['result'] = 'successful'
-            return JsonResponse(response)
+        user = auth.authenticate(request, username=request.POST['username'], password=request.POST['password'])
+        if user is not None and user.is_active:
+            auth.login(request, user)
+            response['result'] = 'SuccessedLogin'
         else:
-            response['result'] = 'unsuccessful'
-            response['type'] = 'typed info unmatched'
-            return JsonResponse(response)
-
-
-
+            response['result'] = 'FailedLogin'
+        return JsonResponse(response)
