@@ -48,5 +48,9 @@ back쪽 레파지토리 + 나중에 합칠예정
 2. Define `GRAPH_MODELS` in `settings.py`.
 3. Create Model Digram and save to png file.
     ```
-    python manage.py graph_models -a -o myapp_models.png
+    python manage.py graph_models -ago ERD.png --arrow-shape normal --color-code-deletions --rankdir BT -X AbstractUser,LogEntry,Group,Permission,ContentType,Session,AbstractBaseUser,PermissionsMixin,AbstractBaseSession
+    ```
+4. For more information,
+    Please refer [Graph models](https://django-extensions.readthedocs.io/en/latest/graph_models.html#example-usage)
+
     ```
