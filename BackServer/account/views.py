@@ -1,10 +1,17 @@
-from player.models import Character, Inventory
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib import auth
 from django.http import JsonResponse
+from django.contrib import auth
+from player.models import *
 from .models import *
 
 
+def create_charactor(user):
+    character = Character(user=user)
+    character.save()
+    inventory = Inventory(character=character)
+    inventory.save()
+    status = Status(character=character)
+    status.save()
 
 @csrf_exempt # TODO CSRF 예외 데코레이터 삭제할 수 있도록 공부...
 def register(request):
@@ -21,7 +28,7 @@ def register(request):
                     )
                     auth.login(request, new_user) # 회원가입과 동시에 로그인 처리
                     response['result'] = 'Successed'
-                    # CreateCharactor(new_user)
+                    create_charactor(new_user)
                 else:
                     response['result'] = 'AlreadyExists' # 같은 username이 이미 DB에 존재함
             except Exception as e:
@@ -30,24 +37,6 @@ def register(request):
         else:
             response['result'] = 'NotMatchedPassword'
         return JsonResponse(response)
-
-        
-    # #인벤토리 생성
-        # player_inventory = Inventory(playerCharacter=player_character)
-        # print(type(player_inventory))
-        # player_inventory.save()
-
-        response['result'] = 'successful'
-        return JsonResponse(response)
-        # except:
-        #     print('no success')
-        #     if Account.objects.filter(name=name, id=id, email=email).exists():
-        #         response['result'] = 'unsuccessful'
-        #         response['type'] = 'user info already exists'
-        #         return JsonResponse(response)
-        #
-        #     response['result'] = 'unsuccessful'
-        #     return JsonResponse(response)
 
 @csrf_exempt
 def login(request):
