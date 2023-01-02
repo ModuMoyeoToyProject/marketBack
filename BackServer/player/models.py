@@ -31,6 +31,7 @@ class Status(models.Model):
 
 class Inventory(models.Model):
     PlayerCharacterID = models.ForeignKey('player.PlayerCharacter', on_delete=models.PROTECT)
+    money = models.IntegerField(default=0)
     weight = models.IntegerField(null=True)
     quantity = models.IntegerField(default=0)
 
