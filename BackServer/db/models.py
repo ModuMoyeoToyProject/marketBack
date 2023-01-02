@@ -17,7 +17,6 @@ class ItemInfo(models.Model):
     sellingValue = models.IntegerField(default=0)
     buyingValue = models.IntegerField(default=0)
     exp = models.IntegerField(default=0)
-    count = models.IntegerField(default=0)
 
 class Fish(models.Model):
     fishName = models.CharField(max_length=255)
