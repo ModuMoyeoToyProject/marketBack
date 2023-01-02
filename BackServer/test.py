@@ -13,6 +13,7 @@ import requests
 import json
 
 print(PlayerCharacter.objects.values())
+print(Inventory.objects.values().get(playerCharacter=1))
 # exmp_npc = NPC(
 #     npcID = 'exampleNPC',
 #     npcName = 'exampleNPC',
