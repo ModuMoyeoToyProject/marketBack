@@ -10,7 +10,7 @@ class PlayerCharacter(models.Model):
     title = models.CharField(max_length=45, default=1)
 
 class Status(models.Model):
-    statusID = models.CharField(max_length=45, primary_key=True)
+    PlayerCharacterID = models.ForeignKey('player.PlayerCharacter', on_delete=models.PROTECT)
     Hp = models.IntegerField()
     Mp = models.IntegerField()
     Str = models.IntegerField()
