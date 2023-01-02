@@ -7,6 +7,7 @@ class PlayerCharacter(models.Model):
     jobID = models.CharField(max_length=45, default=1)
     level = models.IntegerField(default=1)
     exp = models.IntegerField(default=0)
+    location = models.CharField(max_length=255, default='default_location')
     title = models.CharField(max_length=45, default=1)
 
 class Status(models.Model):

@@ -21,7 +21,7 @@ def player_hunting(request):
     # 이벤트 종료 후 경험치 추가
     player_character.exp += item.exp
     player_character.save()
-    
+
     return render(request, 'player/player_update.html')
 
 def player_harvesting(request):

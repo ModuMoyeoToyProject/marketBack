@@ -12,6 +12,7 @@ from system.map_init import map_init
 import requests
 import json
 
+print(PlayerCharacter.objects.values())
 # exmp_npc = NPC(
 #     npcID = 'exampleNPC',
 #     npcName = 'exampleNPC',
@@ -36,5 +37,5 @@ import json
 
 # print(NPC.objects.all())
 # print(Dialogue.objects.values())
-response = requests.post('http://127.0.0.1:8000/game/system/scriptdata', json={'dialogueID': 2})
-print(response.text)
+# response = requests.post('http://127.0.0.1:8000/game/system/scriptdata', json={'dialogueID': 2})
+# print(response.text)
