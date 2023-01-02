@@ -1,4 +1,4 @@
-from player.models import Character, Inventory
+from player.models import PlayerCharacter, Inventory
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib import auth
 from django.http import JsonResponse
@@ -10,6 +10,7 @@ from .models import *
 def register(request):
     if request.method == 'POST': # TODO 매번 API 마다 method == post 확인하는 로직 쓰지 말고 클래스뷰 공부해보기!
         response = dict()
+        print(request.POST['password1'])
         if request.POST['password1'] == request.POST['password2']:
             try:
                 if not User.objects.filter(username=request.POST['username']).exists():
