@@ -5,7 +5,7 @@ import django
 django.setup()
 
 from account.models import Account
-from player.models import PlayerCharacter, Inventory
+from player.models import PlayerCharacter, Inventory, Status
 from db.models import ItemInfo, Item, NPC, Dialogue
 from system.models import Map
 from system.map_init import map_init
@@ -14,6 +14,7 @@ import json
 
 print(PlayerCharacter.objects.values())
 print(Inventory.objects.values().get(playerCharacter=1))
+print(Status.objects.values().get())
 # exmp_npc = NPC(
 #     npcID = 'exampleNPC',
 #     npcName = 'exampleNPC',
