@@ -5,7 +5,6 @@ from django.http import JsonResponse
 from .models import *
 
 
-
 @csrf_exempt # TODO CSRF 예외 데코레이터 삭제할 수 있도록 공부...
 def register(request):
     if request.method == 'POST': # TODO 매번 API 마다 method == post 확인하는 로직 쓰지 말고 클래스뷰 공부해보기!
