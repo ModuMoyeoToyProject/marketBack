@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from .models import PlayerCharacter, Inventory
-from db.models import ItemInfo, Item
+from db.models import ItemInfo, Item, Seed
 import json
 
 def player_hunting(request):
@@ -72,10 +72,14 @@ def player_farming(request):
     if request.method == 'POST':
         event = json.loads(request.body)
 
-        PlayerCharacterID, itemID = event['PlayerCharacterID'], event['itemID']
+        PlayerCharacterID, seedName = event['PlayerCharacterID'], event['seedName']
         player_character = PlayerCharacter.objects.get(id=PlayerCharacterID)
         player_inventory = Inventory.objects.get(PlayerCharacterID=player_character)
-        item_info = ItemInfo.objects.get(itemID=itemID)
+
+        seed = Seed.objects.get(seedName=seedName)
+
+        item_info = ItemInfo.objects.get(itemID=seed.relatedItemID)
+        print(item_info)
 
         if Item.objects.filter(inventory=player_inventory, itemID=item_info.itemID).exists():
             item = Item.objects.get(inventory=player_inventory, itemID=item_info.itemID)
@@ -90,7 +94,7 @@ def player_farming(request):
                         buyingValue=item_info.buyingValue,
                         exp=item_info.exp)
             item.save()
-
+    #
         response = dict()
         response['player_location'] = player_character.location
         response['player_level'] = player_character.level

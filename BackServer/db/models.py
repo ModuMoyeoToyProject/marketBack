@@ -26,6 +26,10 @@ class Fish(models.Model):
     location = models.CharField(max_length=255)
     catchRate = models.IntegerField()
 
+class Seed(models.Model):
+    seedName = models.CharField(max_length=255, unique=True)
+    relatedItemID = models.CharField(max_length=255)
+
 class Job(models.Model):
     jobID = models.CharField(max_length=45, primary_key=True)
     jobName = models.CharField(max_length=45)
