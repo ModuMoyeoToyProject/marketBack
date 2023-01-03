@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.contrib import auth
@@ -21,10 +22,11 @@ def register(request):
             try:
                 if not User.objects.filter(username=request.POST['username']).exists():
                     new_user = User.objects.create_user(
-                        username=request.POST['username'],
+                        username=request.POST['username'], # Valid username test
                         nickname=request.POST['nickname'],
-                        email=request.POST['email'],
+                        email=request.POST['email'], # TODO Valid email test
                         password=request.POST['password1'],
+                        gender=request.POST['gender'],
                     )
                     auth.login(request, new_user) # 회원가입과 동시에 로그인 처리
                     response['result'] = 'Successed'
@@ -33,7 +35,10 @@ def register(request):
                     response['result'] = 'AlreadyExists' # 같은 username이 이미 DB에 존재함
             except Exception as e:
                 print(e)
-                response['result'] = 'Failed' # 어떤 알수없는 이유로 실패, Exception 정보는 보안상 response로 보내지 않음
+                if settings.DEBUG:
+                    response['result'] = f'Failed: {e}'
+                else:
+                    response['result'] = 'Failed' # 어떤 알수없는 이유로 실패, Exception 정보는 보안상 response로 보내지 않음
         else:
             response['result'] = 'NotMatchedPassword'
         return JsonResponse(response)

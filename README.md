@@ -1,11 +1,14 @@
 # marketBack: 시장놀이 API 서버
+
 back쪽 레파지토리 + 나중에 합칠예정
 
+
 ## 개발 환경 구축
+
+
 ### Windows
-1. [Python](https://www.python.org/)을 설치한다.
-1. [Git](https://git-scm.com/)을 설치한다.
-1. [PyCharm](https://www.jetbrains.com/ko-kr/pycharm/) 또는 [VSCode](https://code.visualstudio.com/) 와 같은 IDE를 설치한다.
+
+1. [Python](https://www.python.org/), [Git](https://git-scm.com/), [PyCharm](https://www.jetbrains.com/ko-kr/pycharm/) 또는 [VSCode](https://code.visualstudio.com/)를 설치한다.
 1. Git Bash 터미널을 실행한다.
 1. 다음 명령을 차례로 실행한다.
     ```
@@ -15,11 +18,16 @@ back쪽 레파지토리 + 나중에 합칠예정
     source venv/Script/Activate # 가상환경 활성화
     pip install -r requirements.txt # Django 및 관련 Python 패키지 설치
     ```
+
+
 ### Mac
+
 1. Mac을 Apple 홈페이지에서 구매한다.
 1. 배송 올 때까지 기다린다. (...)
 
+
 ### Docker
+
 1. [VSCode](https://code.visualstudio.com/)를 설치한다.
 1. Docker가 설치된 호스트에 연결한다.
 1. VSCode Integrated Terminal(Bash)에서 다음 명령을 차례로 실행한다.
@@ -30,27 +38,31 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
 1. VSCode에서 해당 컨테이너로 Attach 한다.
 
+
 ## Django Admin page
+
 * [http://localhost:8000](http://localhost:8000)
 
 ## 시스템 요구사항
 
 * Python 3.8.16
-* Django 4.1.1 (No LTS)
+* Django 4.1.1 (Non LTS)
+
 
 ## Visualize ER-Diagram
+
 ### Docker
+
 1. Install dependencies.
     ```
     apt update && apt install -y graphviz
     pip install django-extensions pydotplus # These are contained in the requirements.txt
     ```
-2. Define `GRAPH_MODELS` in `settings.py`.
-3. Create Model Digram and save to png file.
+1. Create Model Digram and save to png file.
     ```
     python manage.py graph_models -ago ERD.png --arrow-shape normal --color-code-deletions --rankdir BT -X AbstractUser,LogEntry,Group,Permission,ContentType,Session,AbstractBaseUser,PermissionsMixin,AbstractBaseSession
     ```
-4. For more information,
+1. For more information,
     Please refer [Graph models](https://django-extensions.readthedocs.io/en/latest/graph_models.html#example-usage)
 
     ```
