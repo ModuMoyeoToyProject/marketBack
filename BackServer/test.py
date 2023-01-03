@@ -47,4 +47,4 @@ import json
 response = requests.post('http://127.0.0.1:8000/game/player/action/farming', json={'message': 'event!!!',
                                                                                    'PlayerCharacterID': 2,
                                                                                    'seedName': '배추씨앗'})
-print(response)
+print(json.loads(response.text))

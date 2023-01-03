@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import PlayerCharacter, Inventory
 from db.models import ItemInfo, Item, Seed
@@ -94,7 +95,7 @@ def player_farming(request):
                         buyingValue=item_info.buyingValue,
                         exp=item_info.exp)
             item.save()
-    #
+
         response = dict()
         response['player_location'] = player_character.location
         response['player_level'] = player_character.level
@@ -107,9 +108,10 @@ def player_farming(request):
             response['player_inventory'] = item_list
         except:
             response['player_inventory'] = 'No items'
-        print(response)
+        response['player_item_add'] = item.itemName
+        response['player_item_lost'] = seed.seedName
 
-    return render(request, 'player/player_update.html')
+    return JsonResponse(data=response)
 
 @csrf_exempt
 def player_fishing(request):
