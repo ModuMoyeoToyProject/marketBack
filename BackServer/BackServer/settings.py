@@ -140,8 +140,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     "http://localhost:8080",
 #     "http://127.0.0.1:9000"
 # ]
-
-GRAPH_MODELS = {
-  'all_applications': True,
-  'group_models': True,
-}
