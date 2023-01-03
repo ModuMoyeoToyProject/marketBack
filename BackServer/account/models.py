@@ -10,7 +10,7 @@ class Group(Group): # 사용자 정의 그룹
 class User(AbstractUser): # 사용자 정의 User; 닉네임, 성별, 프로필, 상메 등의 추가 정보를 관리하기 위해 기존 Django User를 AbstractUser로부터 상속받아 확장
     nickname = models.CharField(verbose_name='닉네임', max_length=16, null=True, unique=True)
     email = models.EmailField(_("email address"))
-    gender = models.BooleanField(verbose_name='성별') # 남자==False, 여자==True
+    gender = models.BooleanField(verbose_name='성별', null=True) # 남자==False, 여자==True
     picture = models.ImageField(verbose_name='프로필 사진', upload_to='www/images/profile', null=True, blank=True) # TODO 프사 업로드 기능 필요?
     status_message = models.CharField(verbose_name='상태 메시지', max_length=32, null=True, blank=True)
     first_name = None # User의 기본 필드; 사용하지 않으므로 None
