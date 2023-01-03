@@ -4,7 +4,6 @@ from account.models import *
 from db.models import *
 
 
-
 class Character(models.Model):
     user = models.ForeignKey(User, verbose_name='사용자 이름', on_delete=models.CASCADE)
     level = models.IntegerField(verbose_name='레벨', default=1)
@@ -13,6 +12,7 @@ class Character(models.Model):
     # statusID = models.CharField(max_length=45, default=1)
     # jobID = models.CharField(max_length=45, default=1)
     # title = models.CharField(max_length=45, default=1) # ??
+    location = models.CharField(max_length=255, default='location')
 
     def __str__(self) -> str:
         return self.user.nickname
@@ -46,13 +46,11 @@ class Status(models.Model):
         verbose_name = "상태"
         verbose_name_plural = verbose_name
 
-
-
-
 class Inventory(models.Model):
     character = models.OneToOneField(Character, verbose_name='가방 소유자', on_delete=models.CASCADE, primary_key=True)
     capacity = models.IntegerField(verbose_name='가방 용량', default=25)
     usage = models.IntegerField(verbose_name='현재 사용량', default=0)
+    money = models.IntegerField(default=0)
     # weight = models.IntegerField(default=0) # TODO ????
     # quantity = models.IntegerField(default=25) # TODO ???
     # items = models.ManyToManyField(Item, verbose_name='보유 아이템', related_name='items_belonging_to', blank=True)#, on_delete=models.PROTECT, primary_key=False)

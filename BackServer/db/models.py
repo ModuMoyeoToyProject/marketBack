@@ -66,7 +66,18 @@ class ItemInfo(models.Model):
     sellingValue = models.IntegerField(default=0)
     buyingValue = models.IntegerField(default=0)
     exp = models.IntegerField(default=0)
-    count = models.IntegerField(default=0)
+
+class Fish(models.Model):
+    fishName = models.CharField(max_length=255)
+    selling_value = models.IntegerField()
+    buying_value = models.IntegerField()
+    exp = models.IntegerField()
+    location = models.CharField(max_length=255)
+    catchRate = models.IntegerField()
+
+class Seed(models.Model):
+    seedName = models.CharField(max_length=255, unique=True)
+    relatedItemID = models.CharField(max_length=255)
 
 class NPC(models.Model):
     npcID = models.CharField(max_length=45, primary_key=True)
