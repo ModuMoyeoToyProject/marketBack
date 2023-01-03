@@ -62,7 +62,30 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
     python manage.py graph_models -ago ERD.png --arrow-shape normal --color-code-deletions --rankdir BT -X AbstractUser,LogEntry,Group,Permission,ContentType,Session,AbstractBaseUser,PermissionsMixin,AbstractBaseSession
     ```
-1. For more information,
-    Please refer [Graph models](https://django-extensions.readthedocs.io/en/latest/graph_models.html#example-usage)
+1. For more information, Refer to [Graph models](https://django-extensions.readthedocs.io/en/latest/graph_models.html#example-usage)
 
+
+## Dump and load initial database
+
+1. Dump current database
     ```
+    python manage.py dumpdata --indent 4 -o dumpdata.json # Including django system database table
+    ```
+    or,
+    ```
+    python manage.py dumpdata account --indent 4 -o account/migrations/dumpdata.json && \
+    python manage.py dumpdata db --indent 4 -o db/migrations/dumpdata.json && \
+    python manage.py dumpdata player --indent 4 -o player/migrations/dumpdata.json && \
+    python manage.py dumpdata system --indent 4 -o system/migrations/dumpdata.json
+    ```
+1. Restore dumpdata to Database
+    ```
+    python manage.py makemigrations && \
+    python manage.py migrate && \
+    python manage.py loaddata dumpdata.json
+    ```
+    or,
+    ```
+    python manage.py loaddata account/migrations/dumpdata.json db/migrations/dumpdata.json player/migrations/dumpdata.json system/migrations/dumpdata.json
+    ```
+1. For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)

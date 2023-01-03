@@ -1,0 +1,1848 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2023-01-03T16:53:30.555Z",
+        "user": 1,
+        "content_type": 23,
+        "object_id": "1",
+        "object_repr": "평민",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2023-01-03T16:54:13.092Z",
+        "user": 1,
+        "content_type": 23,
+        "object_id": "평민",
+        "object_repr": "평민",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2023-01-03T16:54:16.393Z",
+        "user": 1,
+        "content_type": 23,
+        "object_id": "평민",
+        "object_repr": "평민",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2023-01-03T16:54:23.749Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2023-01-03T16:56:34.662Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2023-01-03T16:58:31.495Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "1",
+        "object_repr": "유저",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2023-01-03T16:58:36.443Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "2",
+        "object_repr": "NPC",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2023-01-03T16:58:40.982Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "3",
+        "object_repr": "운영자",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2023-01-03T16:58:44.668Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "4",
+        "object_repr": "몹",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2023-01-03T16:58:51.267Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2023-01-03T16:59:47.629Z",
+        "user": 1,
+        "content_type": 26,
+        "object_id": "1",
+        "object_repr": "비영사천문",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2023-01-03T17:00:05.547Z",
+        "user": 1,
+        "content_type": 26,
+        "object_id": "2",
+        "object_repr": "다람쥐 소환",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2023-01-03T17:00:21.651Z",
+        "user": 1,
+        "content_type": 26,
+        "object_id": "3",
+        "object_repr": "하늘의 기원",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2023-01-03T17:00:37.771Z",
+        "user": 1,
+        "content_type": 26,
+        "object_id": "4",
+        "object_repr": "필살검무",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2023-01-03T17:00:52.695Z",
+        "user": 1,
+        "content_type": 26,
+        "object_id": "5",
+        "object_repr": "도발",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2023-01-03T17:01:35.383Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "1",
+        "object_repr": "초심자의 방패",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2023-01-03T17:01:47.487Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "2",
+        "object_repr": "초심자의 목도",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2023-01-03T17:01:57.057Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "3",
+        "object_repr": "도토리",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2023-01-03T17:02:11.009Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "4",
+        "object_repr": "토끼고기",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2023-01-03T17:02:25.618Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "5",
+        "object_repr": "노란 비서",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2023-01-03T17:03:17.951Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "test",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\ub2c9\\ub124\\uc784\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2023-01-03T17:03:33.251Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "테스트",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item amount\", \"object\": \"\"}}, {\"added\": {\"name\": \"item amount\", \"object\": \"\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2023-01-03T17:04:55.611Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "한글_되니",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add 그룹",
+        "content_type": 6,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change 그룹",
+        "content_type": 6,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete 그룹",
+        "content_type": 6,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view 그룹",
+        "content_type": 6,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add 사용자",
+        "content_type": 7,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change 사용자",
+        "content_type": 7,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete 사용자",
+        "content_type": 7,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view 사용자",
+        "content_type": 7,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add 캐릭터",
+        "content_type": 8,
+        "codename": "add_character"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change 캐릭터",
+        "content_type": 8,
+        "codename": "change_character"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete 캐릭터",
+        "content_type": 8,
+        "codename": "delete_character"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view 캐릭터",
+        "content_type": 8,
+        "codename": "view_character"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add item stored",
+        "content_type": 9,
+        "codename": "add_itemstored"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change item stored",
+        "content_type": 9,
+        "codename": "change_itemstored"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete item stored",
+        "content_type": 9,
+        "codename": "delete_itemstored"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view item stored",
+        "content_type": 9,
+        "codename": "view_itemstored"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add 가방",
+        "content_type": 10,
+        "codename": "add_inventory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change 가방",
+        "content_type": 10,
+        "codename": "change_inventory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete 가방",
+        "content_type": 10,
+        "codename": "delete_inventory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view 가방",
+        "content_type": 10,
+        "codename": "view_inventory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add 상태",
+        "content_type": 11,
+        "codename": "add_status"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change 상태",
+        "content_type": 11,
+        "codename": "change_status"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete 상태",
+        "content_type": 11,
+        "codename": "delete_status"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view 상태",
+        "content_type": 11,
+        "codename": "view_status"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add item amount",
+        "content_type": 12,
+        "codename": "add_itemamount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change item amount",
+        "content_type": 12,
+        "codename": "change_itemamount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete item amount",
+        "content_type": 12,
+        "codename": "delete_itemamount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view item amount",
+        "content_type": 12,
+        "codename": "view_itemamount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add bgm",
+        "content_type": 13,
+        "codename": "add_bgm"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change bgm",
+        "content_type": 13,
+        "codename": "change_bgm"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete bgm",
+        "content_type": 13,
+        "codename": "delete_bgm"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view bgm",
+        "content_type": 13,
+        "codename": "view_bgm"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add date",
+        "content_type": 14,
+        "codename": "add_date"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change date",
+        "content_type": 14,
+        "codename": "change_date"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete date",
+        "content_type": 14,
+        "codename": "delete_date"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view date",
+        "content_type": 14,
+        "codename": "view_date"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add map",
+        "content_type": 15,
+        "codename": "add_map"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change map",
+        "content_type": 15,
+        "codename": "change_map"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete map",
+        "content_type": 15,
+        "codename": "delete_map"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view map",
+        "content_type": 15,
+        "codename": "view_map"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add system",
+        "content_type": 16,
+        "codename": "add_system"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change system",
+        "content_type": 16,
+        "codename": "change_system"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete system",
+        "content_type": 16,
+        "codename": "delete_system"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view system",
+        "content_type": 16,
+        "codename": "view_system"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add timer",
+        "content_type": 17,
+        "codename": "add_timer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change timer",
+        "content_type": 17,
+        "codename": "change_timer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete timer",
+        "content_type": 17,
+        "codename": "delete_timer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view timer",
+        "content_type": 17,
+        "codename": "view_timer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add weather",
+        "content_type": 18,
+        "codename": "add_weather"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change weather",
+        "content_type": 18,
+        "codename": "change_weather"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete weather",
+        "content_type": 18,
+        "codename": "delete_weather"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view weather",
+        "content_type": 18,
+        "codename": "view_weather"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add building",
+        "content_type": 19,
+        "codename": "add_building"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change building",
+        "content_type": 19,
+        "codename": "change_building"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete building",
+        "content_type": 19,
+        "codename": "delete_building"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view building",
+        "content_type": 19,
+        "codename": "view_building"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can add 아이템",
+        "content_type": 20,
+        "codename": "add_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can change 아이템",
+        "content_type": 20,
+        "codename": "change_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can delete 아이템",
+        "content_type": 20,
+        "codename": "delete_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can view 아이템",
+        "content_type": 20,
+        "codename": "view_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can add item info",
+        "content_type": 21,
+        "codename": "add_iteminfo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can change item info",
+        "content_type": 21,
+        "codename": "change_iteminfo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can delete item info",
+        "content_type": 21,
+        "codename": "delete_iteminfo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can view item info",
+        "content_type": 21,
+        "codename": "view_iteminfo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+        "name": "Can add 아이템 타입",
+        "content_type": 22,
+        "codename": "add_itemtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+        "name": "Can change 아이템 타입",
+        "content_type": 22,
+        "codename": "change_itemtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+        "name": "Can delete 아이템 타입",
+        "content_type": 22,
+        "codename": "delete_itemtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+        "name": "Can view 아이템 타입",
+        "content_type": 22,
+        "codename": "view_itemtype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+        "name": "Can add 직업",
+        "content_type": 23,
+        "codename": "add_job"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+        "name": "Can change 직업",
+        "content_type": 23,
+        "codename": "change_job"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+        "name": "Can delete 직업",
+        "content_type": 23,
+        "codename": "delete_job"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+        "name": "Can view 직업",
+        "content_type": 23,
+        "codename": "view_job"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 93,
+    "fields": {
+        "name": "Can add none acting object",
+        "content_type": 24,
+        "codename": "add_noneactingobject"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 94,
+    "fields": {
+        "name": "Can change none acting object",
+        "content_type": 24,
+        "codename": "change_noneactingobject"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 95,
+    "fields": {
+        "name": "Can delete none acting object",
+        "content_type": 24,
+        "codename": "delete_noneactingobject"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 96,
+    "fields": {
+        "name": "Can view none acting object",
+        "content_type": 24,
+        "codename": "view_noneactingobject"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 97,
+    "fields": {
+        "name": "Can add npc",
+        "content_type": 25,
+        "codename": "add_npc"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 98,
+    "fields": {
+        "name": "Can change npc",
+        "content_type": 25,
+        "codename": "change_npc"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 99,
+    "fields": {
+        "name": "Can delete npc",
+        "content_type": 25,
+        "codename": "delete_npc"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 100,
+    "fields": {
+        "name": "Can view npc",
+        "content_type": 25,
+        "codename": "view_npc"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 101,
+    "fields": {
+        "name": "Can add 스킬",
+        "content_type": 26,
+        "codename": "add_skill"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 102,
+    "fields": {
+        "name": "Can change 스킬",
+        "content_type": 26,
+        "codename": "change_skill"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 103,
+    "fields": {
+        "name": "Can delete 스킬",
+        "content_type": 26,
+        "codename": "delete_skill"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 104,
+    "fields": {
+        "name": "Can view 스킬",
+        "content_type": 26,
+        "codename": "view_skill"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 105,
+    "fields": {
+        "name": "Can add dialogue",
+        "content_type": 27,
+        "codename": "add_dialogue"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 106,
+    "fields": {
+        "name": "Can change dialogue",
+        "content_type": 27,
+        "codename": "change_dialogue"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 107,
+    "fields": {
+        "name": "Can delete dialogue",
+        "content_type": 27,
+        "codename": "delete_dialogue"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 108,
+    "fields": {
+        "name": "Can view dialogue",
+        "content_type": 27,
+        "codename": "view_dialogue"
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "유저",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+        "name": "NPC",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+        "name": "운영자",
+        "permissions": []
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 4,
+    "fields": {
+        "name": "몹",
+        "permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "account",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "account",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "player",
+        "model": "character"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "player",
+        "model": "itemstored"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "player",
+        "model": "inventory"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "player",
+        "model": "status"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "player",
+        "model": "itemamount"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "system",
+        "model": "bgm"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "system",
+        "model": "date"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "system",
+        "model": "map"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "system",
+        "model": "system"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "system",
+        "model": "timer"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "system",
+        "model": "weather"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "db",
+        "model": "building"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+        "app_label": "db",
+        "model": "item"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+        "app_label": "db",
+        "model": "iteminfo"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 22,
+    "fields": {
+        "app_label": "db",
+        "model": "itemtype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 23,
+    "fields": {
+        "app_label": "db",
+        "model": "job"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 24,
+    "fields": {
+        "app_label": "db",
+        "model": "noneactingobject"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 25,
+    "fields": {
+        "app_label": "db",
+        "model": "npc"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 26,
+    "fields": {
+        "app_label": "db",
+        "model": "skill"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 27,
+    "fields": {
+        "app_label": "db",
+        "model": "dialogue"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "h9xbv2wugnso08f531y7fro35tv4km2s",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hA6lqHj0r1nIANDpWogKe3KeHfbpAvd_vf-eyvP65L92tLsJ1EXher0uwWOz1R2IA8u96pjLcs8Bb0r-qBN36qk1_Vw_wKZW97eYIUhgAFLxgYHFpk7IDAOI8UODfWSJJ5FjHPB0lYecRgHIkw9sFGfL8dHN3Q:1pCki9:fuQHKMWso0068CbWloOcPP2q6tZAoh8Y3vkq-q8gkuI",
+        "expire_date": "2023-01-17T17:04:25.890Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "jhhk85ifm1ywe7hwawgvyyor8tlitb22",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSE8Zgy4dO83EGAGqRpISrtq_Hdt0oVu7znnbiLEdalhHTyHicRFaHH63VLMT247oEds9y5zb8s8Jbkr8qBD3jrx63q4fwc1jvqtwXE5q1y0SYgODKFBQAJi8Mk4axkUkI8lF9QARJxB52jIKWs9J_H-ANthN_4:1pCkXT:tf_AZRShsW7dNo9zKOCqgvqskw98BHxmjosWrVF0B40",
+        "expire_date": "2023-01-17T16:53:23.410Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wm5dnxpi4poa08zdcxzre47mw82mpmth",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSE8Zgy4dO83EGAGqRpISrtq_Hdt0oVu7znnbiLEdalhHTyHicRFaHH63VLMT247oEds9y5zb8s8Jbkr8qBD3jrx63q4fwc1jvqtwXE5q1y0SYgODKFBQAJi8Mk4axkUkI8lF9QARJxB52jIKWs9J_H-ANthN_4:1pCkXT:tf_AZRShsW7dNo9zKOCqgvqskw98BHxmjosWrVF0B40",
+        "expire_date": "2023-01-17T16:53:23.579Z"
+    }
+},
+{
+    "model": "account.group",
+    "pk": 1,
+    "fields": {}
+},
+{
+    "model": "account.group",
+    "pk": 2,
+    "fields": {}
+},
+{
+    "model": "account.group",
+    "pk": 3,
+    "fields": {}
+},
+{
+    "model": "account.group",
+    "pk": 4,
+    "fields": {}
+},
+{
+    "model": "account.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$y9FAvSPdSIM4Nfg8Qhg6Nl$FDPEFEAy4uY+jmygq8S0Oi8yuedHxLWOZmhICKzbHkI=",
+        "last_login": "2023-01-03T16:53:23.576Z",
+        "is_superuser": true,
+        "username": "root",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-01-03T16:53:21.882Z",
+        "nickname": null,
+        "email": "1@1.com",
+        "gender": null,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "account.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$i08wK4L5a1uDiGUHa88BKY$lLCT39/YBFaPeQWVkpeQbRmtP3VaQyirnSVjGGN343I=",
+        "last_login": "2023-01-03T17:02:57Z",
+        "is_superuser": false,
+        "username": "한글_되니",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-03T17:02:57Z",
+        "nickname": "테스트",
+        "email": "foo@bar.com",
+        "gender": true,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "account.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$pRoSa9xx178w8BW4NOrTE6$RHrnJtQqfoG0PyaX8KUN2d32D7UXUBZml82y+HuWu0I=",
+        "last_login": "2023-01-03T17:04:25.878Z",
+        "is_superuser": false,
+        "username": "cocopalm",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-03T17:04:25.786Z",
+        "nickname": "코코팜",
+        "email": "foo@bar.com",
+        "gender": true,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "player.character",
+    "pk": 2,
+    "fields": {
+        "user": 5,
+        "level": 1,
+        "exp": 0
+    }
+},
+{
+    "model": "player.character",
+    "pk": 3,
+    "fields": {
+        "user": 6,
+        "level": 1,
+        "exp": 0
+    }
+},
+{
+    "model": "player.status",
+    "pk": 2,
+    "fields": {
+        "hp": 100,
+        "mp": 0,
+        "Str": 0,
+        "Dex": 0,
+        "Con": 0,
+        "Attk": 0,
+        "Def": 0,
+        "Hit": 0,
+        "Dodge": 0,
+        "Block": 0,
+        "Critical": 0,
+        "Agility": 0,
+        "Speed": 0,
+        "Friendly": 0,
+        "buffID": 0,
+        "debuffID": 0
+    }
+},
+{
+    "model": "player.status",
+    "pk": 3,
+    "fields": {
+        "hp": 100,
+        "mp": 0,
+        "Str": 0,
+        "Dex": 0,
+        "Con": 0,
+        "Attk": 0,
+        "Def": 0,
+        "Hit": 0,
+        "Dodge": 0,
+        "Block": 0,
+        "Critical": 0,
+        "Agility": 0,
+        "Speed": 0,
+        "Friendly": 0,
+        "buffID": 0,
+        "debuffID": 0
+    }
+},
+{
+    "model": "player.inventory",
+    "pk": 2,
+    "fields": {
+        "capacity": 25,
+        "usage": 0
+    }
+},
+{
+    "model": "player.inventory",
+    "pk": 3,
+    "fields": {
+        "capacity": 25,
+        "usage": 0
+    }
+},
+{
+    "model": "player.itemamount",
+    "pk": 1,
+    "fields": {
+        "inventory": 2,
+        "item": 3,
+        "item_amount": 5
+    }
+},
+{
+    "model": "player.itemamount",
+    "pk": 2,
+    "fields": {
+        "inventory": 2,
+        "item": 1,
+        "item_amount": 2
+    }
+},
+{
+    "model": "db.skill",
+    "pk": 1,
+    "fields": {
+        "name": "비영사천문",
+        "description": "정신을 집중하여 동서남북으로 순간이동한다.",
+        "hp_consumption": 2,
+        "mp_consumption": 10,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.skill",
+    "pk": 2,
+    "fields": {
+        "name": "다람쥐 소환",
+        "description": "마른 하늘에서 갑자기 다람쥐가 내려온다.",
+        "hp_consumption": 0,
+        "mp_consumption": 550,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.skill",
+    "pk": 3,
+    "fields": {
+        "name": "하늘의 기원",
+        "description": "체력을 회복한다.",
+        "hp_consumption": -25,
+        "mp_consumption": 75,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.skill",
+    "pk": 4,
+    "fields": {
+        "name": "필살검무",
+        "description": "순식간에 적을 난도질한다.",
+        "hp_consumption": 45,
+        "mp_consumption": 175,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.skill",
+    "pk": 5,
+    "fields": {
+        "name": "도발",
+        "description": "적에게 도발하여 공격을 유도한다.",
+        "hp_consumption": 0,
+        "mp_consumption": 45,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.job",
+    "pk": "평민",
+    "fields": {
+        "description": ""
+    }
+},
+{
+    "model": "db.item",
+    "pk": 1,
+    "fields": {
+        "name": "초심자의 방패",
+        "description": "초심자가 연습용으로 들고 다니는 방패",
+        "purchase_price": 50,
+        "sell_price": 30,
+        "weight": 20
+    }
+},
+{
+    "model": "db.item",
+    "pk": 2,
+    "fields": {
+        "name": "초심자의 목도",
+        "description": "초심자가 훈련을 목적으로 휘두르는 목도. 나무에 가시가 박혀있는 경우가 있어 주의가 필요하다.",
+        "purchase_price": 20,
+        "sell_price": 12,
+        "weight": 8
+    }
+},
+{
+    "model": "db.item",
+    "pk": 3,
+    "fields": {
+        "name": "도토리",
+        "description": "다람쥐가 나무 위에서 떨어뜨린 도토리. 깨끗하게 손질되어 있다.",
+        "purchase_price": 3,
+        "sell_price": 1,
+        "weight": 1
+    }
+},
+{
+    "model": "db.item",
+    "pk": 4,
+    "fields": {
+        "name": "토끼고기",
+        "description": "토끼를 잡아 가죽을 벗기고 손질을 한 익히지 않은 날고기이다.",
+        "purchase_price": 22,
+        "sell_price": 15,
+        "weight": 6
+    }
+},
+{
+    "model": "db.item",
+    "pk": 5,
+    "fields": {
+        "name": "노란 비서",
+        "description": "무작위로 공간 이동한다. 다만, 어디로 떨어질 지는 운명에 맡겨야 한다.",
+        "purchase_price": 16,
+        "sell_price": 4,
+        "weight": 1
+    }
+}
+]

@@ -1,0 +1,129 @@
+[
+{
+    "model": "db.skill",
+    "pk": 1,
+    "fields": {
+        "name": "비영사천문",
+        "description": "정신을 집중하여 동서남북으로 순간이동한다.",
+        "hp_consumption": 2,
+        "mp_consumption": 10,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.skill",
+    "pk": 2,
+    "fields": {
+        "name": "다람쥐 소환",
+        "description": "마른 하늘에서 갑자기 다람쥐가 내려온다.",
+        "hp_consumption": 0,
+        "mp_consumption": 550,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.skill",
+    "pk": 3,
+    "fields": {
+        "name": "하늘의 기원",
+        "description": "체력을 회복한다.",
+        "hp_consumption": -25,
+        "mp_consumption": 75,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.skill",
+    "pk": 4,
+    "fields": {
+        "name": "필살검무",
+        "description": "순식간에 적을 난도질한다.",
+        "hp_consumption": 45,
+        "mp_consumption": 175,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.skill",
+    "pk": 5,
+    "fields": {
+        "name": "도발",
+        "description": "적에게 도발하여 공격을 유도한다.",
+        "hp_consumption": 0,
+        "mp_consumption": 45,
+        "cooldown_time": 1000,
+        "activation_time": 500,
+        "effect": ""
+    }
+},
+{
+    "model": "db.job",
+    "pk": "평민",
+    "fields": {
+        "description": ""
+    }
+},
+{
+    "model": "db.item",
+    "pk": 1,
+    "fields": {
+        "name": "초심자의 방패",
+        "description": "초심자가 연습용으로 들고 다니는 방패",
+        "purchase_price": 50,
+        "sell_price": 30,
+        "weight": 20
+    }
+},
+{
+    "model": "db.item",
+    "pk": 2,
+    "fields": {
+        "name": "초심자의 목도",
+        "description": "초심자가 훈련을 목적으로 휘두르는 목도. 나무에 가시가 박혀있는 경우가 있어 주의가 필요하다.",
+        "purchase_price": 20,
+        "sell_price": 12,
+        "weight": 8
+    }
+},
+{
+    "model": "db.item",
+    "pk": 3,
+    "fields": {
+        "name": "도토리",
+        "description": "다람쥐가 나무 위에서 떨어뜨린 도토리. 깨끗하게 손질되어 있다.",
+        "purchase_price": 3,
+        "sell_price": 1,
+        "weight": 1
+    }
+},
+{
+    "model": "db.item",
+    "pk": 4,
+    "fields": {
+        "name": "토끼고기",
+        "description": "토끼를 잡아 가죽을 벗기고 손질을 한 익히지 않은 날고기이다.",
+        "purchase_price": 22,
+        "sell_price": 15,
+        "weight": 6
+    }
+},
+{
+    "model": "db.item",
+    "pk": 5,
+    "fields": {
+        "name": "노란 비서",
+        "description": "무작위로 공간 이동한다. 다만, 어디로 떨어질 지는 운명에 맡겨야 한다.",
+        "purchase_price": 16,
+        "sell_price": 4,
+        "weight": 1
+    }
+}
+]
