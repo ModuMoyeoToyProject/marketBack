@@ -10,7 +10,7 @@ class ItemtypeAdmin(admin.ModelAdmin):
     list_display = ['name', 'description']
     
 class ItemAdmin(admin.ModelAdmin):
-    list_display = ['name', 'description', 'weight', 'purchase_price', 'sell_price']
+    list_display = ['name', 'description', 'purchase_price', 'sell_price', 'weight', 'durability']
     search_fields = ['name']
 
 class JobAdmin(admin.ModelAdmin):

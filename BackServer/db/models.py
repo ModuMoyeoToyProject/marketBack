@@ -51,8 +51,8 @@ class Item(models.Model):
     sell_price = models.IntegerField(verbose_name='판매 가격 (냥)', default=0) # TODO 화폐단위 규정 논의 필요
     # exp = models.IntegerField(default=0)
     # count = models.IntegerField(verbose_name='수량', default=1)
-    weight = models.DecimalField(verbose_name='무게 (g)', default=1, max_digits=6, decimal_places=0, validators=[MinValueValidator(0), MaxValueValidator(100000)])
-    durability = models.DecimalField(verbose_name='내구성 (%)', default=100, max_digits=5, decimal_places=2, validators=[MinValueValidator(0), MaxValueValidator(100)])
+    weight = models.DecimalField(verbose_name='무게 (근)', default=1, max_digits=6, decimal_places=0, validators=[MinValueValidator(0), MaxValueValidator(100000)]) # TODO 무게단위 규정 논의 필요
+    durability = models.DecimalField(verbose_name='내구도 (%)', default=100, max_digits=3, decimal_places=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
     # owners = models.ForeignKey(User, verbose_name='보유자', blank=True, on_delete=models.PROTECT)
 
     def __str__(self) -> str:
