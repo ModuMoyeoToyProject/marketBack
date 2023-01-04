@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.core.validators import MinValueValidator, MaxValueValidator
 from account.models import *
 from db.models import *
-from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Character(models.Model):
