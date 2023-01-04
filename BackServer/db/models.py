@@ -87,6 +87,28 @@ class NPC(models.Model):
     npcType = models.CharField(max_length=45)
     npcImgPath = models.CharField(max_length=45)
 
+class Script(models.Model):
+    title = models.CharField(verbose_name='제목', max_length=64, unique=True, null=True)
+    
+    def __str__(self) -> str:
+        return self.title
+    class Meta:
+        verbose_name = '대본'
+        verbose_name_plural = verbose_name
+
+class Sentence(models.Model):
+    speaker = models.CharField(verbose_name='화자', max_length=32, null=True, blank=True)
+    text = models.TextField(verbose_name='대사', null=True, blank=True)
+    order = models.IntegerField(verbose_name='대화 순서')
+    captioning_elapsed_time = models.IntegerField(verbose_name='캡셔닝 지속시간 (ms) (0~60000)', default=1, validators=[MinValueValidator(0), MaxValueValidator(60000)])
+    scripts = models.ForeignKey('Script', on_delete=models.PROTECT, null=True, blank=True)
+
+    def __str__(self) -> str:
+        return self.speaker + ': ' + self.text[:min(30, len(self.text))] + '...' if len(self.text) > 30 else ''
+    class Meta:
+        verbose_name = '문장'
+        verbose_name_plural = verbose_name
+
 class Dialogue(models.Model):
     npc = models.ForeignKey('db.NPC', on_delete=models.PROTECT)
     mainCategory = models.CharField(max_length=255)

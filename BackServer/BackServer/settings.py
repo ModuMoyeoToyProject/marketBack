@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'django_extensions',
+    'django_summernote',
     'account.apps.AccountConfig',
     'player.apps.PlayerConfig',
     'system.apps.SystemConfig',
@@ -153,3 +154,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     "http://localhost:8080",
 #     "http://127.0.0.1:9000"
 # ]
+
+SUMMERNOTE_THEME = 'bs5'
+SUMMERNOTE_CONFIG = {
+    'summernote': {
+        'width': '100%',
+        'height': '240',
+    }
+}
