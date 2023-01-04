@@ -1,0 +1,302 @@
+[
+    {
+        "model": "system.map",
+        "pk": 1,
+        "fields": {
+            "name": "🏡집",
+            "description": "",
+            "required_level": 1,
+            "location": null,
+            "coordinate": "0,0",
+            "street": "1,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 2,
+        "fields": {
+            "name": "⛰마녀의 숲",
+            "description": "",
+            "required_level": 1,
+            "location": null,
+            "coordinate": "0,1",
+            "street": "1,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 3,
+        "fields": {
+            "name": "🏞가파른 계곡",
+            "description": "",
+            "required_level": 1,
+            "location": null,
+            "coordinate": "0,2",
+            "street": "1,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 4,
+        "fields": {
+            "name": "🧙그리무츠의 동굴",
+            "description": "",
+            "required_level": 1,
+            "location": null,
+            "coordinate": "0,3",
+            "street": "0,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 5,
+        "fields": {
+            "name": "👨‍👩‍👧‍👦슈비즈 마을",
+            "description": "",
+            "required_level": 2,
+            "location": null,
+            "coordinate": "1,2",
+            "street": "0,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 6,
+        "fields": {
+            "name": "🏞칼바람이 부는 언덕",
+            "description": "",
+            "required_level": 2,
+            "location": null,
+            "coordinate": "2,2",
+            "street": "0,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 7,
+        "fields": {
+            "name": "⛰석양이 지는 숲",
+            "description": "",
+            "required_level": 2,
+            "location": null,
+            "coordinate": "2,1",
+            "street": "1,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 8,
+        "fields": {
+            "name": "🧙이그스의 호수",
+            "description": "",
+            "required_level": 2,
+            "location": null,
+            "coordinate": "2,0",
+            "street": "1,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 9,
+        "fields": {
+            "name": "👨‍👩‍👧‍👦오르메인 마을",
+            "description": "",
+            "required_level": 3,
+            "location": null,
+            "coordinate": "3,2",
+            "street": "1,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 10,
+        "fields": {
+            "name": "🏞프레이스 들판지대",
+            "description": "",
+            "required_level": 3,
+            "location": null,
+            "coordinate": "3,3",
+            "street": "0,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 11,
+        "fields": {
+            "name": "🏰소리드 제 1성막",
+            "description": "",
+            "required_level": 4,
+            "location": null,
+            "coordinate": "2,3",
+            "street": "1,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 12,
+        "fields": {
+            "name": "🏰블레니오 성",
+            "description": "",
+            "required_level": 4,
+            "location": null,
+            "coordinate": "2,4",
+            "street": "1,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 13,
+        "fields": {
+            "name": "🏰블렌 경비대",
+            "description": "",
+            "required_level": 4,
+            "location": null,
+            "coordinate": "3,4",
+            "street": "0,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 14,
+        "fields": {
+            "name": "🏰소리드 제 2성막",
+            "description": "",
+            "required_level": 4,
+            "location": null,
+            "coordinate": "2,5",
+            "street": "1,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 15,
+        "fields": {
+            "name": "🏞셀루우즈 곡창지대",
+            "description": "",
+            "required_level": 5,
+            "location": null,
+            "coordinate": "3,5",
+            "street": "0,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 16,
+        "fields": {
+            "name": "🏜카바스 사막",
+            "description": "",
+            "required_level": 5,
+            "location": null,
+            "coordinate": "4,5",
+            "street": "1,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 17,
+        "fields": {
+            "name": "🏝오아시스",
+            "description": "",
+            "required_level": 5,
+            "location": null,
+            "coordinate": "4,6",
+            "street": "1,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 18,
+        "fields": {
+            "name": "🧙환각의 피라미드",
+            "description": "",
+            "required_level": 5,
+            "location": null,
+            "coordinate": "5,6",
+            "street": "0,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 19,
+        "fields": {
+            "name": "🏰리우센 성지",
+            "description": "",
+            "required_level": 5,
+            "location": null,
+            "coordinate": "4,7",
+            "street": "0,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 20,
+        "fields": {
+            "name": "🌊코나 강",
+            "description": "",
+            "required_level": 6,
+            "location": null,
+            "coordinate": "2,6",
+            "street": "0,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 21,
+        "fields": {
+            "name": "👨‍👩‍👧‍👦테제인 산업지구",
+            "description": "",
+            "required_level": 6,
+            "location": null,
+            "coordinate": "1,6",
+            "street": "0,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 22,
+        "fields": {
+            "name": "💂‍♂️포스페어 거리",
+            "description": "",
+            "required_level": 6,
+            "location": null,
+            "coordinate": "0,6",
+            "street": "1,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 23,
+        "fields": {
+            "name": "🧙소티에즈 골목",
+            "description": "",
+            "required_level": 6,
+            "location": null,
+            "coordinate": "0,5",
+            "street": "1,0"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 24,
+        "fields": {
+            "name": "🧙미케니의 길",
+            "description": "",
+            "required_level": 6,
+            "location": null,
+            "coordinate": "-1,6",
+            "street": "0,1"
+        }
+    },
+    {
+        "model": "system.map",
+        "pk": 25,
+        "fields": {
+            "name": "🧙데바트 동굴",
+            "description": "",
+            "required_level": 6,
+            "location": null,
+            "coordinate": "0,7",
+            "street": "0,0"
+        }
+    }
+]

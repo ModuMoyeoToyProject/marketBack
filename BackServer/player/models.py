@@ -7,8 +7,8 @@ from db.models import *
 
 class Character(models.Model):
     user = models.ForeignKey(User, verbose_name='사용자 이름', on_delete=models.CASCADE) # TODO 한 계정당 캐릭터 여러개 가능할꺼야?
-    level = models.IntegerField(verbose_name='레벨', default=1)
-    exp = models.IntegerField(verbose_name='경험치', default=0)
+    level = models.IntegerField(verbose_name='레벨 (1~100)', default=1, validators=[MinValueValidator(1), MaxValueValidator(100)])
+    exp = models.IntegerField(verbose_name='경험치 (0~1000000)', default=0, validators=[MinValueValidator(0), MaxValueValidator(1000000)])
     # job = models.ForeignKey(Job, verbose_name='직업', on_delete=models.PROTECT)
     # statusID = models.CharField(max_length=45, default=1)
     # jobID = models.CharField(max_length=45, default=1)
