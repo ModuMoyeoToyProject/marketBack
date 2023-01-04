@@ -5,7 +5,8 @@
     "fields": {
         "user": 5,
         "level": 1,
-        "exp": 0
+        "exp": 0,
+        "location": "location"
     }
 },
 {
@@ -14,7 +15,8 @@
     "fields": {
         "user": 6,
         "level": 1,
-        "exp": 0
+        "exp": 0,
+        "location": "location"
     }
 },
 {
@@ -66,7 +68,8 @@
     "pk": 2,
     "fields": {
         "capacity": 25,
-        "usage": 0
+        "usage": 0,
+        "money": 0
     }
 },
 {
@@ -74,25 +77,53 @@
     "pk": 3,
     "fields": {
         "capacity": 25,
-        "usage": 0
+        "usage": 0,
+        "money": 0
     }
 },
 {
     "model": "player.itemamount",
-    "pk": 1,
+    "pk": 3,
     "fields": {
-        "inventory": 2,
-        "item": 3,
-        "item_amount": 5
+        "inventory": 3,
+        "item": 5,
+        "item_amount": 23
     }
 },
 {
     "model": "player.itemamount",
-    "pk": 2,
+    "pk": 4,
     "fields": {
         "inventory": 2,
         "item": 1,
-        "item_amount": 2
+        "item_amount": 4
+    }
+},
+{
+    "model": "player.itemamount",
+    "pk": 5,
+    "fields": {
+        "inventory": 2,
+        "item": 2,
+        "item_amount": 53
+    }
+},
+{
+    "model": "player.itemamount",
+    "pk": 6,
+    "fields": {
+        "inventory": 2,
+        "item": 3,
+        "item_amount": 1
+    }
+},
+{
+    "model": "player.itemamount",
+    "pk": 7,
+    "fields": {
+        "inventory": 3,
+        "item": 4,
+        "item_amount": 1
     }
 }
 ]

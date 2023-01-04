@@ -72,6 +72,46 @@
     }
 },
 {
+    "model": "db.itemtype",
+    "pk": 1,
+    "fields": {
+        "name": "의류",
+        "description": ""
+    }
+},
+{
+    "model": "db.itemtype",
+    "pk": 2,
+    "fields": {
+        "name": "소모품",
+        "description": ""
+    }
+},
+{
+    "model": "db.itemtype",
+    "pk": 3,
+    "fields": {
+        "name": "식품",
+        "description": ""
+    }
+},
+{
+    "model": "db.itemtype",
+    "pk": 4,
+    "fields": {
+        "name": "무기",
+        "description": ""
+    }
+},
+{
+    "model": "db.itemtype",
+    "pk": 5,
+    "fields": {
+        "name": "장신구",
+        "description": ""
+    }
+},
+{
     "model": "db.item",
     "pk": 1,
     "fields": {
@@ -79,7 +119,9 @@
         "description": "초심자가 연습용으로 들고 다니는 방패",
         "purchase_price": 50,
         "sell_price": 30,
-        "weight": 20
+        "weight": "20",
+        "durability": "100",
+        "type": 4
     }
 },
 {
@@ -90,7 +132,9 @@
         "description": "초심자가 훈련을 목적으로 휘두르는 목도. 나무에 가시가 박혀있는 경우가 있어 주의가 필요하다.",
         "purchase_price": 20,
         "sell_price": 12,
-        "weight": 8
+        "weight": "8",
+        "durability": "100",
+        "type": 4
     }
 },
 {
@@ -101,7 +145,9 @@
         "description": "다람쥐가 나무 위에서 떨어뜨린 도토리. 깨끗하게 손질되어 있다.",
         "purchase_price": 3,
         "sell_price": 1,
-        "weight": 1
+        "weight": "1",
+        "durability": "100",
+        "type": 3
     }
 },
 {
@@ -112,7 +158,9 @@
         "description": "토끼를 잡아 가죽을 벗기고 손질을 한 익히지 않은 날고기이다.",
         "purchase_price": 22,
         "sell_price": 15,
-        "weight": 6
+        "weight": "6",
+        "durability": "100",
+        "type": 3
     }
 },
 {
@@ -123,7 +171,104 @@
         "description": "무작위로 공간 이동한다. 다만, 어디로 떨어질 지는 운명에 맡겨야 한다.",
         "purchase_price": 16,
         "sell_price": 4,
-        "weight": 1
+        "weight": "1",
+        "durability": "100",
+        "type": 2
+    }
+},
+{
+    "model": "db.script",
+    "pk": 1,
+    "fields": {
+        "title": "Sample conversation"
+    }
+},
+{
+    "model": "db.sentence",
+    "pk": 1,
+    "fields": {
+        "speaker": "Person 1",
+        "text": "<p>Hey, how's it going?<br></p>",
+        "order": 1,
+        "captioning_elapsed_time": 1,
+        "scripts": 1
+    }
+},
+{
+    "model": "db.sentence",
+    "pk": 2,
+    "fields": {
+        "speaker": "Person 2",
+        "text": "<p>Not great, I'm really stressed out with all the work I have to do.<br></p>",
+        "order": 2,
+        "captioning_elapsed_time": 1,
+        "scripts": 1
+    }
+},
+{
+    "model": "db.sentence",
+    "pk": 3,
+    "fields": {
+        "speaker": "Person 1",
+        "text": "<p>Yeah, I know how that feels. What's been keeping you so busy?<br></p>",
+        "order": 3,
+        "captioning_elapsed_time": 1,
+        "scripts": 1
+    }
+},
+{
+    "model": "db.sentence",
+    "pk": 4,
+    "fields": {
+        "speaker": "Person 2",
+        "text": "<p>I have a big project due at the end of the week and I'm struggling to get everything done on time.<br></p>",
+        "order": 4,
+        "captioning_elapsed_time": 1,
+        "scripts": 1
+    }
+},
+{
+    "model": "db.sentence",
+    "pk": 5,
+    "fields": {
+        "speaker": "Person 1",
+        "text": "<p>Have you tried breaking it down into smaller tasks? That can make it feel more manageable.<br></p>",
+        "order": 5,
+        "captioning_elapsed_time": 1,
+        "scripts": 1
+    }
+},
+{
+    "model": "db.sentence",
+    "pk": 6,
+    "fields": {
+        "speaker": "Person 2",
+        "text": "<p>Yeah, I've tried that, but I still feel overwhelmed.<br></p>",
+        "order": 6,
+        "captioning_elapsed_time": 1,
+        "scripts": 1
+    }
+},
+{
+    "model": "db.sentence",
+    "pk": 7,
+    "fields": {
+        "speaker": "Person 1",
+        "text": "<p>Well, if you need any help, just let me know. I'm happy to lend a hand.<br></p>",
+        "order": 7,
+        "captioning_elapsed_time": 1,
+        "scripts": 1
+    }
+},
+{
+    "model": "db.sentence",
+    "pk": 8,
+    "fields": {
+        "speaker": "Person 2",
+        "text": "<p>Thanks, I appreciate it. I'll definitely keep that in mind.<br></p>",
+        "order": 8,
+        "captioning_elapsed_time": 1,
+        "scripts": 1
     }
 }
 ]
