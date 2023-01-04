@@ -299,6 +299,175 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2023-01-04T01:03:22.423Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "코코팜",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"item amount\", \"object\": \"\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2023-01-04T04:36:52.072Z",
+        "user": 1,
+        "content_type": 22,
+        "object_id": "1",
+        "object_repr": "의류",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2023-01-04T04:36:55.717Z",
+        "user": 1,
+        "content_type": 22,
+        "object_id": "2",
+        "object_repr": "소모품",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2023-01-04T04:36:59.395Z",
+        "user": 1,
+        "content_type": 22,
+        "object_id": "3",
+        "object_repr": "식품",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2023-01-04T04:37:02.142Z",
+        "user": 1,
+        "content_type": 22,
+        "object_id": "4",
+        "object_repr": "무기",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2023-01-04T04:37:05.991Z",
+        "user": 1,
+        "content_type": 22,
+        "object_id": "5",
+        "object_repr": "장신구",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2023-01-04T04:39:02.736Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "5",
+        "object_repr": "노란 비서",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\uc544\\uc774\\ud15c \\ud0c0\\uc785\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2023-01-04T04:39:06.827Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "4",
+        "object_repr": "토끼고기",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\uc544\\uc774\\ud15c \\ud0c0\\uc785\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2023-01-04T04:39:10.585Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "3",
+        "object_repr": "도토리",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\uc544\\uc774\\ud15c \\ud0c0\\uc785\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2023-01-04T04:39:10.748Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "3",
+        "object_repr": "도토리",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2023-01-04T04:39:10.918Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "3",
+        "object_repr": "도토리",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2023-01-04T04:39:15.394Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "2",
+        "object_repr": "초심자의 목도",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\uc544\\uc774\\ud15c \\ud0c0\\uc785\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2023-01-04T04:39:21.576Z",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "1",
+        "object_repr": "초심자의 방패",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\uc544\\uc774\\ud15c \\ud0c0\\uc785\"]}}]"
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -1271,6 +1440,78 @@
     }
 },
 {
+    "model": "auth.permission",
+    "pk": 109,
+    "fields": {
+        "name": "Can add fish",
+        "content_type": 28,
+        "codename": "add_fish"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 110,
+    "fields": {
+        "name": "Can change fish",
+        "content_type": 28,
+        "codename": "change_fish"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 111,
+    "fields": {
+        "name": "Can delete fish",
+        "content_type": 28,
+        "codename": "delete_fish"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 112,
+    "fields": {
+        "name": "Can view fish",
+        "content_type": 28,
+        "codename": "view_fish"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 113,
+    "fields": {
+        "name": "Can add seed",
+        "content_type": 29,
+        "codename": "add_seed"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 114,
+    "fields": {
+        "name": "Can change seed",
+        "content_type": 29,
+        "codename": "change_seed"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 115,
+    "fields": {
+        "name": "Can delete seed",
+        "content_type": 29,
+        "codename": "delete_seed"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 116,
+    "fields": {
+        "name": "Can view seed",
+        "content_type": 29,
+        "codename": "view_seed"
+    }
+},
+{
     "model": "auth.group",
     "pk": 1,
     "fields": {
@@ -1519,6 +1760,22 @@
     }
 },
 {
+    "model": "contenttypes.contenttype",
+    "pk": 28,
+    "fields": {
+        "app_label": "db",
+        "model": "fish"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 29,
+    "fields": {
+        "app_label": "db",
+        "model": "seed"
+    }
+},
+{
     "model": "sessions.session",
     "pk": "h9xbv2wugnso08f531y7fro35tv4km2s",
     "fields": {
@@ -1540,6 +1797,22 @@
     "fields": {
         "session_data": ".eJxVjMsOwiAQRf-FtSE8Zgy4dO83EGAGqRpISrtq_Hdt0oVu7znnbiLEdalhHTyHicRFaHH63VLMT247oEds9y5zb8s8Jbkr8qBD3jrx63q4fwc1jvqtwXE5q1y0SYgODKFBQAJi8Mk4axkUkI8lF9QARJxB52jIKWs9J_H-ANthN_4:1pCkXT:tf_AZRShsW7dNo9zKOCqgvqskw98BHxmjosWrVF0B40",
         "expire_date": "2023-01-17T16:53:23.579Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "xy46ok177mjg5nb45ahttglbhaab7f6i",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSE8Zgy4dO83EGAGqRpISrtq_Hdt0oVu7znnbiLEdalhHTyHicRFaHH63VLMT247oEds9y5zb8s8Jbkr8qBD3jrx63q4fwc1jvqtwXE5q1y0SYgODKFBQAJi8Mk4axkUkI8lF9QARJxB52jIKWs9J_H-ANthN_4:1pCvW2:aV7p48NfUITR18wh4mKooOfH76kx40gbhj-xnDVjTKg",
+        "expire_date": "2023-01-18T04:36:38.047Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "yd97axs3i9rpy46m4i92w92kxcqrqv8h",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSE8Zgy4dO83EGAGqRpISrtq_Hdt0oVu7znnbiLEdalhHTyHicRFaHH63VLMT247oEds9y5zb8s8Jbkr8qBD3jrx63q4fwc1jvqtwXE5q1y0SYgODKFBQAJi8Mk4axkUkI8lF9QARJxB52jIKWs9J_H-ANthN_4:1pCs8Z:CDML3yIvt-bd3QPoyySsXVsYQxHtklu_LgcoNd4xBbU",
+        "expire_date": "2023-01-18T01:00:11.894Z"
     }
 },
 {
@@ -1567,7 +1840,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$390000$y9FAvSPdSIM4Nfg8Qhg6Nl$FDPEFEAy4uY+jmygq8S0Oi8yuedHxLWOZmhICKzbHkI=",
-        "last_login": "2023-01-03T16:53:23.576Z",
+        "last_login": "2023-01-04T04:36:38.044Z",
         "is_superuser": true,
         "username": "root",
         "is_staff": true,
@@ -1628,7 +1901,8 @@
     "fields": {
         "user": 5,
         "level": 1,
-        "exp": 0
+        "exp": 0,
+        "location": "location"
     }
 },
 {
@@ -1637,7 +1911,8 @@
     "fields": {
         "user": 6,
         "level": 1,
-        "exp": 0
+        "exp": 0,
+        "location": "location"
     }
 },
 {
@@ -1689,7 +1964,8 @@
     "pk": 2,
     "fields": {
         "capacity": 25,
-        "usage": 0
+        "usage": 0,
+        "money": 0
     }
 },
 {
@@ -1697,7 +1973,8 @@
     "pk": 3,
     "fields": {
         "capacity": 25,
-        "usage": 0
+        "usage": 0,
+        "money": 0
     }
 },
 {
@@ -1716,6 +1993,15 @@
         "inventory": 2,
         "item": 1,
         "item_amount": 2
+    }
+},
+{
+    "model": "player.itemamount",
+    "pk": 3,
+    "fields": {
+        "inventory": 3,
+        "item": 5,
+        "item_amount": 999
     }
 },
 {
@@ -1791,6 +2077,46 @@
     }
 },
 {
+    "model": "db.itemtype",
+    "pk": 1,
+    "fields": {
+        "name": "의류",
+        "description": ""
+    }
+},
+{
+    "model": "db.itemtype",
+    "pk": 2,
+    "fields": {
+        "name": "소모품",
+        "description": ""
+    }
+},
+{
+    "model": "db.itemtype",
+    "pk": 3,
+    "fields": {
+        "name": "식품",
+        "description": ""
+    }
+},
+{
+    "model": "db.itemtype",
+    "pk": 4,
+    "fields": {
+        "name": "무기",
+        "description": ""
+    }
+},
+{
+    "model": "db.itemtype",
+    "pk": 5,
+    "fields": {
+        "name": "장신구",
+        "description": ""
+    }
+},
+{
     "model": "db.item",
     "pk": 1,
     "fields": {
@@ -1798,7 +2124,9 @@
         "description": "초심자가 연습용으로 들고 다니는 방패",
         "purchase_price": 50,
         "sell_price": 30,
-        "weight": 20
+        "weight": "20",
+        "durability": "100",
+        "type": 4
     }
 },
 {
@@ -1809,7 +2137,9 @@
         "description": "초심자가 훈련을 목적으로 휘두르는 목도. 나무에 가시가 박혀있는 경우가 있어 주의가 필요하다.",
         "purchase_price": 20,
         "sell_price": 12,
-        "weight": 8
+        "weight": "8",
+        "durability": "100",
+        "type": 4
     }
 },
 {
@@ -1820,7 +2150,9 @@
         "description": "다람쥐가 나무 위에서 떨어뜨린 도토리. 깨끗하게 손질되어 있다.",
         "purchase_price": 3,
         "sell_price": 1,
-        "weight": 1
+        "weight": "1",
+        "durability": "100",
+        "type": 3
     }
 },
 {
@@ -1831,7 +2163,9 @@
         "description": "토끼를 잡아 가죽을 벗기고 손질을 한 익히지 않은 날고기이다.",
         "purchase_price": 22,
         "sell_price": 15,
-        "weight": 6
+        "weight": "6",
+        "durability": "100",
+        "type": 3
     }
 },
 {
@@ -1842,7 +2176,9 @@
         "description": "무작위로 공간 이동한다. 다만, 어디로 떨어질 지는 운명에 맡겨야 한다.",
         "purchase_price": 16,
         "sell_price": 4,
-        "weight": 1
+        "weight": "1",
+        "durability": "100",
+        "type": 2
     }
 }
 ]

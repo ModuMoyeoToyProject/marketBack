@@ -73,6 +73,10 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
     or,
     ```
+    python manage.py dumpdata account db player system --indent 4 -o dumpdata.json # Including django system database table
+    ```
+    or,
+    ```
     python manage.py dumpdata account --indent 4 -o account/migrations/dumpdata.json && \
     python manage.py dumpdata db --indent 4 -o db/migrations/dumpdata.json && \
     python manage.py dumpdata player --indent 4 -o player/migrations/dumpdata.json && \
