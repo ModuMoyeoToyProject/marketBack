@@ -5,7 +5,7 @@ from db.models import *
 
 
 class CharacterAdmin(admin.ModelAdmin):
-    list_display = ['get_username', 'get_nickname', 'level', 'exp']
+    list_display = ['get_nickname', 'get_username', 'level', 'exp']
     
     @admin.display(ordering='user__nickname', description='닉네임')
     def get_nickname(self, obj):

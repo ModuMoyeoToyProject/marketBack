@@ -20,6 +20,36 @@
     }
 },
 {
+    "model": "player.character",
+    "pk": 4,
+    "fields": {
+        "user": 9,
+        "level": 1,
+        "exp": 0,
+        "location": "location"
+    }
+},
+{
+    "model": "player.character",
+    "pk": 5,
+    "fields": {
+        "user": 7,
+        "level": 1,
+        "exp": 0,
+        "location": "location"
+    }
+},
+{
+    "model": "player.character",
+    "pk": 6,
+    "fields": {
+        "user": 8,
+        "level": 1,
+        "exp": 0,
+        "location": "location"
+    }
+},
+{
     "model": "player.status",
     "pk": 2,
     "fields": {
@@ -44,6 +74,72 @@
 {
     "model": "player.status",
     "pk": 3,
+    "fields": {
+        "hp": 100,
+        "mp": 0,
+        "Str": 0,
+        "Dex": 0,
+        "Con": 0,
+        "Attk": 0,
+        "Def": 0,
+        "Hit": 0,
+        "Dodge": 0,
+        "Block": 0,
+        "Critical": 0,
+        "Agility": 0,
+        "Speed": 0,
+        "Friendly": 0,
+        "buffID": 0,
+        "debuffID": 0
+    }
+},
+{
+    "model": "player.status",
+    "pk": 4,
+    "fields": {
+        "hp": 100,
+        "mp": 0,
+        "Str": 0,
+        "Dex": 0,
+        "Con": 0,
+        "Attk": 0,
+        "Def": 0,
+        "Hit": 0,
+        "Dodge": 0,
+        "Block": 0,
+        "Critical": 0,
+        "Agility": 0,
+        "Speed": 0,
+        "Friendly": 0,
+        "buffID": 0,
+        "debuffID": 0
+    }
+},
+{
+    "model": "player.status",
+    "pk": 5,
+    "fields": {
+        "hp": 100,
+        "mp": 0,
+        "Str": 0,
+        "Dex": 0,
+        "Con": 0,
+        "Attk": 0,
+        "Def": 0,
+        "Hit": 0,
+        "Dodge": 0,
+        "Block": 0,
+        "Critical": 0,
+        "Agility": 0,
+        "Speed": 0,
+        "Friendly": 0,
+        "buffID": 0,
+        "debuffID": 0
+    }
+},
+{
+    "model": "player.status",
+    "pk": 6,
     "fields": {
         "hp": 100,
         "mp": 0,
@@ -75,6 +171,33 @@
 {
     "model": "player.inventory",
     "pk": 3,
+    "fields": {
+        "capacity": 25,
+        "usage": 0,
+        "money": 0
+    }
+},
+{
+    "model": "player.inventory",
+    "pk": 4,
+    "fields": {
+        "capacity": 25,
+        "usage": 0,
+        "money": 0
+    }
+},
+{
+    "model": "player.inventory",
+    "pk": 5,
+    "fields": {
+        "capacity": 25,
+        "usage": 0,
+        "money": 0
+    }
+},
+{
+    "model": "player.inventory",
+    "pk": 6,
     "fields": {
         "capacity": 25,
         "usage": 0,

@@ -73,32 +73,28 @@ back쪽 레파지토리 + 나중에 합칠예정
 
 ## Dump and load initial database
 
-1. Dump current database
+* 데이터베이스 덤프
     ```
-    python manage.py dumpdata --indent 4 -o dumpdata.json # Including django system database table
-    ```
-    or,
-    ```
-    python manage.py dumpdata account --indent 4 -o account/migrations/dumpdata.json && \
+    python manage.py dumpdata account.user --indent 4 -o account/migrations/init_user.json # Current user data && \
+    python manage.py dumpdata auth.group --indent 4 -o account/migrations/init_auth.group.json # Current group data && \
+    python manage.py dumpdata account.group --indent 4 -o account/migrations/init_account.group.json # Current group data && \
     python manage.py dumpdata db --indent 4 -o db/migrations/dumpdata.json && \
     python manage.py dumpdata player --indent 4 -o player/migrations/dumpdata.json && \
     python manage.py dumpdata system --indent 4 -o system/migrations/dumpdata.json
     ```
-1. Restore dumpdata to Database
+* Dumpdata로부터 데이터베이스 생성
     ```
-    rm db.sqlite3 && \
+    rm db.sqlite3 # Delete current DB && \
     python manage.py makemigrations && \
-    python manage.py migrate && \
-    python manage.py loaddata dumpdata.json
+    python manage.py migrate # Create empty DB && \
+    python manage.py loaddata account/migrations/init_user.json && \
+    python manage.py loaddata account/migrations/init_auth.group.json && \
+    python manage.py loaddata account/migrations/init_account.group.json && \
+    python manage.py loaddata db/migrations/dumpdata.json && \
+    python manage.py loaddata player/migrations/dumpdata.json && \
+    python manage.py loaddata system/migrations/dumpdata.json
     ```
-    or,
-    ```
-    rm db.sqlite3 && \
-    python manage.py makemigrations && \
-    python manage.py migrate && \
-    python manage.py loaddata account/migrations/dumpdata.json db/migrations/dumpdata.json player/migrations/dumpdata.json system/migrations/dumpdata.json
-    ```
-1. For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)
+* For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)
 
 
 ## i18n support

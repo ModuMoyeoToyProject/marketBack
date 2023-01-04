@@ -52,6 +52,7 @@ class UserAdmin(UserAdmin):
     ordering = ['is_staff', 'username',] # admin 페이지에서 계정 목록의 정렬 기준
 
 class GroupAdmin(GroupAdmin):
+    list_display = ['name', 'description']
     filter_horizontal=('permissions',)
 
 admin.site.register(User, UserAdmin) # User 계정을 admin 페이지에 등록

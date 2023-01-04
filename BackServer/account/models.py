@@ -1,8 +1,9 @@
-from django.contrib.auth.models import AbstractUser, Group
+from django.contrib.auth.models import AbstractUser, Group as Django_Group
 from django.db import models
 from django.utils.translation import gettext_lazy as _ # Django의 기본적인 i18n translate 함수
 
-class Group(Group): # 사용자 정의 그룹
+class Group(Django_Group): # 사용자 정의 그룹
+    description = models.CharField(verbose_name='설명', max_length=128, null=True, blank=True)
     class Meta:
         verbose_name = "그룹"
         verbose_name_plural = verbose_name
