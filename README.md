@@ -39,9 +39,15 @@ back쪽 레파지토리 + 나중에 합칠예정
 1. VSCode에서 해당 컨테이너로 Attach 한다.
 
 
-## Django Admin page
+## 데이터베이스 관리용 Django Admin site
 
 * [http://localhost:8000](http://localhost:8000)
+
+    ![2023-01-04 09 39 29](https://user-images.githubusercontent.com/28856527/210464121-24d336f5-26ad-4698-999b-ae880740e061.png)
+
+* Superuser login
+    * username: root
+    * password: 1
 
 ## 시스템 요구사항
 
@@ -93,6 +99,7 @@ back쪽 레파지토리 + 나중에 합칠예정
     python manage.py loaddata account/migrations/dumpdata.json db/migrations/dumpdata.json player/migrations/dumpdata.json system/migrations/dumpdata.json
     ```
 1. For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)
+<<<<<<< HEAD
 
 
 ## i18n support
@@ -113,3 +120,5 @@ back쪽 레파지토리 + 나중에 합칠예정
     python manage.py compilemessages
     ```
 1. Restart django server
+=======
+>>>>>>> upstream/skill_activity#7
