@@ -31,6 +31,7 @@ class ScriptAdmin(admin.ModelAdmin):
 class SentenceAdmin(SummernoteModelAdmin):
     list_display = ['speaker', 'text', 'captioning_elapsed_time']
     summernote_fields = ['text']
+    search_fields = ['speaker', 'text']
     
 
 admin.site.register(Skill,    SkillAdmin)

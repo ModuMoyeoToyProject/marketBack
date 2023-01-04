@@ -99,7 +99,7 @@ class Script(models.Model):
 class Sentence(models.Model):
     speaker = models.CharField(verbose_name='화자', max_length=32, null=True, blank=True)
     text = models.TextField(verbose_name='대사', null=True, blank=True)
-    order = models.IntegerField(verbose_name='대화 순서')
+    order = models.IntegerField(verbose_name='대화 순서', default=1, validators=[MinValueValidator(1)])
     captioning_elapsed_time = models.IntegerField(verbose_name='캡셔닝 지속시간 (ms) (0~60000)', default=1, validators=[MinValueValidator(0), MaxValueValidator(60000)])
     scripts = models.ForeignKey('Script', on_delete=models.PROTECT, null=True, blank=True)
 
