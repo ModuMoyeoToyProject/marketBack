@@ -1,5 +1,5 @@
 from django.contrib.auth.models import Group as Django_Group
-from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.admin import UserAdmin, GroupAdmin
 from django.contrib import admin
 from .models import *
 from django.utils.translation import gettext_lazy as _
@@ -51,6 +51,9 @@ class UserAdmin(UserAdmin):
     search_fields = ['username', 'nickname', 'email'] # admin 페이지의 검색창의 검색 대상
     ordering = ['is_staff', 'username',] # admin 페이지에서 계정 목록의 정렬 기준
 
+class GroupAdmin(GroupAdmin):
+    filter_horizontal=('permissions',)
+
 admin.site.register(User, UserAdmin) # User 계정을 admin 페이지에 등록
 admin.site.unregister(Django_Group) # Default Group 엔티티를 admin 페이지에서 제거
-admin.site.register(Group) # Group 계정을 admin 페이지에 등록, User와 동일한 위치에 두기 위해서 재등록
+admin.site.register(Group, GroupAdmin) # Group 계정을 admin 페이지에 등록, User와 동일한 위치에 두기 위해서 재등록
