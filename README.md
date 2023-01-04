@@ -29,7 +29,7 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
     cd BackServer # Django 프로젝트 폴더로 이동 후,
     ```
-    하단의 `초기 데이터베이스 백업 및 생성` 부분 참조
+    하단의 `초기 데이터베이스 백업 및 생성`에서 `Dumpdata로부터 데이터베이스 생성` 실행
 1. IDE에서 Django 서버를 실행시키거나, Bash 터미널에서 수동으로 실행
     ```
     python manage.py runserver # Django 내장 웹서버 런칭
@@ -56,7 +56,7 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
     cd BackServer # Django 프로젝트 폴더로 이동 후,
     ```
-    하단의 `초기 데이터베이스 백업 및 생성` 부분 참조
+    하단의 `초기 데이터베이스 백업 및 생성`에서 `Dumpdata로부터 데이터베이스 생성` 실행
 1. VSCode로부터 Django 내장 웹서버를 런칭한다.
 
 ## 데이터베이스 관리용 Django Admin site
