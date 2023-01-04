@@ -93,3 +93,23 @@ back쪽 레파지토리 + 나중에 합칠예정
     python manage.py loaddata account/migrations/dumpdata.json db/migrations/dumpdata.json player/migrations/dumpdata.json system/migrations/dumpdata.json
     ```
 1. For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)
+
+
+## i18n support
+
+1. Install [gettext/iconv](https://mlocati.github.io/articles/gettext-iconv-windows.html) or `apt update && apt install -y gettext`
+1. Wrapping string using `from django.utils.translation import ugettext_lazy as _`
+1. Create initial translation file
+    ```
+    python manage.py makemessages -l en
+    python manage.py makemessages -l ko
+    ```
+    or,
+    ```
+    python manage.py makemessages -a
+    ```
+1. Compile translation file(\*.po) to binary file(\*.mo).
+    ```
+    python manage.py compilemessages
+    ```
+1. Restart django server
