@@ -86,20 +86,19 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
 1. Restore dumpdata to Database
     ```
-    rm db.sqlite3
+    rm db.sqlite3 && \
     python manage.py makemigrations && \
     python manage.py migrate && \
     python manage.py loaddata dumpdata.json
     ```
     or,
     ```
-    rm db.sqlite3
+    rm db.sqlite3 && \
     python manage.py makemigrations && \
     python manage.py migrate && \
     python manage.py loaddata account/migrations/dumpdata.json db/migrations/dumpdata.json player/migrations/dumpdata.json system/migrations/dumpdata.json
     ```
 1. For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)
-<<<<<<< HEAD
 
 
 ## i18n support
@@ -120,5 +119,3 @@ back쪽 레파지토리 + 나중에 합칠예정
     python manage.py compilemessages
     ```
 1. Restart django server
-=======
->>>>>>> upstream/skill_activity#7
