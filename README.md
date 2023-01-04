@@ -73,10 +73,6 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
     or,
     ```
-    python manage.py dumpdata account db player system --indent 4 -o dumpdata.json # Including django system database table
-    ```
-    or,
-    ```
     python manage.py dumpdata account --indent 4 -o account/migrations/dumpdata.json && \
     python manage.py dumpdata db --indent 4 -o db/migrations/dumpdata.json && \
     python manage.py dumpdata player --indent 4 -o player/migrations/dumpdata.json && \
@@ -84,12 +80,16 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
 1. Restore dumpdata to Database
     ```
+    rm db.sqlite3
     python manage.py makemigrations && \
     python manage.py migrate && \
     python manage.py loaddata dumpdata.json
     ```
     or,
     ```
+    rm db.sqlite3
+    python manage.py makemigrations && \
+    python manage.py migrate && \
     python manage.py loaddata account/migrations/dumpdata.json db/migrations/dumpdata.json player/migrations/dumpdata.json system/migrations/dumpdata.json
     ```
 1. For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)
