@@ -2,10 +2,11 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from account.models import *
 from db.models import *
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Character(models.Model):
-    user = models.ForeignKey(User, verbose_name='사용자 이름', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, verbose_name='사용자 이름', on_delete=models.CASCADE) # TODO 한 계정당 캐릭터 여러개 가능할꺼야?
     level = models.IntegerField(verbose_name='레벨', default=1)
     exp = models.IntegerField(verbose_name='경험치', default=0)
     # job = models.ForeignKey(Job, verbose_name='직업', on_delete=models.PROTECT)
@@ -65,7 +66,7 @@ class Inventory(models.Model):
 class ItemAmount(models.Model):
     inventory = models.ForeignKey(Inventory, verbose_name='소유자', related_name='inventory_of', on_delete=models.CASCADE, null=True)
     item = models.ForeignKey(Item, verbose_name='아이템', related_name='item_belonging_to', on_delete=models.CASCADE, null=True, blank=True)
-    item_amount = models.IntegerField(verbose_name='수량', default=1)
+    item_amount = models.IntegerField(verbose_name='수량 (1~999)', default=1, validators=[MinValueValidator(1), MaxValueValidator(999)])
     
     def __str__(self) -> str:
         return ''
