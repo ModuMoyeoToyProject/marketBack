@@ -30,7 +30,8 @@ RUN apt update && \
         libglib2.0-0 \
         libsm6 \
         libxext6 \
-        libxrender-dev
+        libxrender-dev \
+        gettext
 
 COPY requirements.txt requirements.txt
 
