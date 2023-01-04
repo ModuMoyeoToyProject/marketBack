@@ -46,7 +46,6 @@ class Item(models.Model):
     description = models.CharField(verbose_name='설명', max_length=64, blank=True)
     # inventory = models.ForeignKey('player.inventory', on_delete=models.PROTECT, null=True)
     # itemID = models.CharField(max_length=45)
-    # type = models.ForeignKey(Itemtype, verbose_name='아이템 타입', on_delete=models.PROTECT)
     purchase_price = models.IntegerField(verbose_name='구입 가격 (냥)', default=0) # TODO 화폐단위 규정 논의 필요
     sell_price = models.IntegerField(verbose_name='판매 가격 (냥)', default=0) # TODO 화폐단위 규정 논의 필요
     # exp = models.IntegerField(default=0)
@@ -54,6 +53,7 @@ class Item(models.Model):
     weight = models.DecimalField(verbose_name='무게 (근)', default=1, max_digits=6, decimal_places=0, validators=[MinValueValidator(0), MaxValueValidator(100000)]) # TODO 무게단위 규정 논의 필요
     durability = models.DecimalField(verbose_name='내구도 (%)', default=100, max_digits=3, decimal_places=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
     # owners = models.ForeignKey(User, verbose_name='보유자', blank=True, on_delete=models.PROTECT)
+    type = models.ForeignKey(Itemtype, verbose_name='아이템 타입', on_delete=models.SET_NULL, null=True)
 
     def __str__(self) -> str:
         return self.name
