@@ -1,9 +1,18 @@
-from player.models import PlayerCharacter, Inventory
+from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib import auth
 from django.http import JsonResponse
+from django.contrib import auth
+from player.models import *
 from .models import *
 
+
+def create_charactor(user):
+    character = Character(user=user)
+    character.save()
+    inventory = Inventory(character=character)
+    inventory.save()
+    status = Status(character=character)
+    status.save()
 
 @csrf_exempt # TODO CSRF 예외 데코레이터 삭제할 수 있도록 공부...
 def register(request):
@@ -14,40 +23,26 @@ def register(request):
             try:
                 if not User.objects.filter(username=request.POST['username']).exists():
                     new_user = User.objects.create_user(
-                        username=request.POST['username'],
+                        username=request.POST['username'], # Valid username test
                         nickname=request.POST['nickname'],
-                        email=request.POST['email'],
+                        email=request.POST['email'], # TODO Valid email test
                         password=request.POST['password1'],
+                        gender=request.POST['gender'],
                     )
                     auth.login(request, new_user) # 회원가입과 동시에 로그인 처리
                     response['result'] = 'Successed'
-                    # CreateCharactor(new_user)
+                    create_charactor(new_user)
                 else:
                     response['result'] = 'AlreadyExists' # 같은 username이 이미 DB에 존재함
             except Exception as e:
                 print(e)
-                response['result'] = 'Failed' # 어떤 알수없는 이유로 실패, Exception 정보는 보안상 response로 보내지 않음
+                if settings.DEBUG:
+                    response['result'] = f'Failed: {e}'
+                else:
+                    response['result'] = 'Failed' # 어떤 알수없는 이유로 실패, Exception 정보는 보안상 response로 보내지 않음
         else:
             response['result'] = 'NotMatchedPassword'
         return JsonResponse(response)
-
-        
-    # #인벤토리 생성
-        # player_inventory = Inventory(playerCharacter=player_character)
-        # print(type(player_inventory))
-        # player_inventory.save()
-
-        response['result'] = 'successful'
-        return JsonResponse(response)
-        # except:
-        #     print('no success')
-        #     if Account.objects.filter(name=name, id=id, email=email).exists():
-        #         response['result'] = 'unsuccessful'
-        #         response['type'] = 'user info already exists'
-        #         return JsonResponse(response)
-        #
-        #     response['result'] = 'unsuccessful'
-        #     return JsonResponse(response)
 
 @csrf_exempt
 def login(request):

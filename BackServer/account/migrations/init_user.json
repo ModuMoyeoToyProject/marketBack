@@ -1,0 +1,122 @@
+[
+{
+    "model": "account.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$LlI3OPaZChPDEJkdOenuLC$HTPc3nQ4QbmE6PrEOzdkoVmtQ7FZyznkalRYkfObBAs=",
+        "last_login": "2023-01-04T14:23:49.855Z",
+        "is_superuser": true,
+        "username": "root",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-01-04T13:17:51.437Z",
+        "nickname": null,
+        "email": "1@1.com",
+        "gender": null,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "account.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$ZmtUeCwIdIlnDiykYozCnI$LfJEedi8s3rdgL/ptMjLUOtn7mt7+QHTxSCPsYZXxQ0=",
+        "last_login": "2023-01-04T14:00:17Z",
+        "is_superuser": false,
+        "username": "j",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-04T14:00:17Z",
+        "nickname": "밀크정",
+        "email": "foo@bar.com",
+        "gender": true,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "account.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$qFQ87Plbc5G9kbNsbuogdi$kcMUZh5NKwJtYymzkgHfrC0ou9T3FqEzkezc/wXRiVY=",
+        "last_login": "2023-01-04T14:01:47Z",
+        "is_superuser": false,
+        "username": "d",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-04T14:01:47Z",
+        "nickname": "도롱",
+        "email": "foo@bar.com",
+        "gender": false,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "account.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$ne33VeDiFbsGLdSbzRjDjK$oP3As3vKHocalrbT+V0Xi/GM9mkCKjtW/zS0UjsszY8=",
+        "last_login": "2023-01-04T14:02:19Z",
+        "is_superuser": false,
+        "username": "m",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-04T14:02:19Z",
+        "nickname": "레몬",
+        "email": "foo@bar.com",
+        "gender": false,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "account.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$j51YGXnx1upvkEYxMU6QTL$Zi1fpTEW05H2VtK21uZY11lm0/Q/eeFw8Nd7bv36y5w=",
+        "last_login": "2023-01-04T14:03:33Z",
+        "is_superuser": false,
+        "username": "r",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-04T14:03:33Z",
+        "nickname": "라즈베리",
+        "email": "foo@bar.com",
+        "gender": true,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "account.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$MCoPIMwR717m5ie1RSXBBm$/GQxktTlPpRo/4uIniFRTQLfBfsS4GOn3nKNv/CYfhE=",
+        "last_login": "2023-01-04T14:03:50.218Z",
+        "is_superuser": false,
+        "username": "l",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-04T14:03:50.117Z",
+        "nickname": "레제",
+        "email": "foo@bar.com",
+        "gender": true,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import PlayerCharacter, Inventory
+from .models import *
 from db.models import ItemInfo, Item, Seed
 import json
 
@@ -9,7 +9,7 @@ def player_hunting(request):
     #이벤트 종료 후 아이템 추가
     playerID, itemID = int(request.POST.get('playerID')), request.POST.get('itemID')
     item_info = ItemInfo.objects.get(itemID=itemID)
-    player_character = PlayerCharacter.objects.get(id=playerID)
+    player_character = Character.objects.get(id=playerID)
     player_inventory = Inventory.objects.get(playerCharacter=player_character)
     item = Item(inventory=player_inventory,
                 itemID=item_info.itemID,
@@ -30,7 +30,7 @@ def player_harvesting(request):
     #이벤트 종료 후 아이템 추가
     playerID, itemID = int(request.POST.get('playerID')), request.POST.get('itemID')
     item_info = ItemInfo.objects.get(itemID=itemID)
-    player_character = PlayerCharacter.objects.get(id=playerID)
+    player_character = Character.objects.get(id=playerID)
     player_inventory = Inventory.objects.get(playerCharacter=player_character)
     item = Item(inventory=player_inventory,
                 itemID=item_info.itemID,
@@ -51,7 +51,7 @@ def player_taming(request):
     #이벤트 종료 후 아이템 추가
     playerID, itemID = int(request.POST.get('playerID')), request.POST.get('itemID')
     item_info = ItemInfo.objects.get(itemID=itemID)
-    player_character = PlayerCharacter.objects.get(id=playerID)
+    player_character = Character.objects.get(id=playerID)
     player_inventory = Inventory.objects.get(playerCharacter=player_character)
     item = Item(inventory=player_inventory,
                 itemID=item_info.itemID,
@@ -118,7 +118,7 @@ def player_fishing(request):
     #이벤트 종료 후 아이템 추가
     playerID, itemID = int(request.POST.get('playerID')), request.POST.get('itemID')
     item_info = ItemInfo.objects.get(itemID=itemID)
-    player_character = PlayerCharacter.objects.get(id=playerID)
+    player_character = Character.objects.get(id=playerID)
     player_inventory = Inventory.objects.get(playerCharacter=player_character)
     item = Item(inventory=player_inventory,
                 itemID=item_info.itemID,

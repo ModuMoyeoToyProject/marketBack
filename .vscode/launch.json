@@ -10,7 +10,8 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": true,
+            "cwd": "${fileDirname}"
         },
         {
             "name": "Python: Django",
@@ -19,6 +20,18 @@
             "program": "${workspaceFolder}/BackServer/manage.py",
             "args": [
                 "runserver"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Test: account",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/BackServer/manage.py",
+            "args": [
+                "test",
+                "account"
             ],
             "django": true,
             "justMyCode": true

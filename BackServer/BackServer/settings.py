@@ -10,8 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 from os.path import join
+from django.utils.translation import gettext_lazy as _
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'django_extensions',
+    'django_summernote',
     'account.apps.AccountConfig',
     'player.apps.PlayerConfig',
     'system.apps.SystemConfig',
@@ -53,13 +57,22 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware'
 ]
+
+LANGUAGES = [
+    ('ko', _('Korean')),
+    ('en', _('English')),
+]
+LOCALE_PATHS = (
+    join(BASE_DIR, 'locale'),
+)
+[os.makedirs(path, exist_ok=True) for path in LOCALE_PATHS]
 
 ROOT_URLCONF = 'BackServer.urls'
 
@@ -142,7 +155,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     "http://127.0.0.1:9000"
 # ]
 
-GRAPH_MODELS = {
-  'all_applications': True,
-  'group_models': True,
+SUMMERNOTE_THEME = 'bs5'
+SUMMERNOTE_CONFIG = {
+    'summernote': {
+        'width': '100%',
+        'height': '240',
+    }
 }
