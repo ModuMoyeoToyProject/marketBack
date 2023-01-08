@@ -43,17 +43,22 @@ class Itemtype(models.Model):
 
 class Item(models.Model):
     name = models.CharField(verbose_name='아이템명', max_length=16, unique=True)
+    type = models.ForeignKey(Itemtype, verbose_name='아이템 타입', on_delete=models.SET_NULL, null=True)
     description = models.CharField(verbose_name='설명', max_length=64, blank=True)
+    purchase_price = models.IntegerField(verbose_name='구입 가격 (냥)', default=0)
+    sell_price = models.IntegerField(verbose_name='판매 가격 (냥)', default=0)
+    # durability = models.DecimalField(verbose_name='내구도 (%)', default=100, max_digits=3, decimal_places=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
+    weight = models.DecimalField(verbose_name='무게 (근)', default=1, max_digits=6, decimal_places=0, validators=[MinValueValidator(0), MaxValueValidator(100000)]) # TODO 무게단위 규정 논의 필요
+    image_path = models.CharField(verbose_name='이미지 경로', max_length=200, null=True, blank=True)
+    hp = models.IntegerField(verbose_name='체력 (%)', default=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
+    mp = models.IntegerField(verbose_name='마나 (%)', default=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
+    power = models.IntegerField(verbose_name='힘 (%)', default=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
+    # stats = models.ManyToManyField(Itemstat, verbose_name='능력치', blank=True)
     # inventory = models.ForeignKey('player.inventory', on_delete=models.PROTECT, null=True)
     # itemID = models.CharField(max_length=45)
-    purchase_price = models.IntegerField(verbose_name='구입 가격 (냥)', default=0) # TODO 화폐단위 규정 논의 필요
-    sell_price = models.IntegerField(verbose_name='판매 가격 (냥)', default=0) # TODO 화폐단위 규정 논의 필요
     # exp = models.IntegerField(default=0)
     # count = models.IntegerField(verbose_name='수량', default=1)
-    weight = models.DecimalField(verbose_name='무게 (근)', default=1, max_digits=6, decimal_places=0, validators=[MinValueValidator(0), MaxValueValidator(100000)]) # TODO 무게단위 규정 논의 필요
-    durability = models.DecimalField(verbose_name='내구도 (%)', default=100, max_digits=3, decimal_places=0, validators=[MinValueValidator(0), MaxValueValidator(100)])
     # owners = models.ForeignKey(User, verbose_name='보유자', blank=True, on_delete=models.PROTECT)
-    type = models.ForeignKey(Itemtype, verbose_name='아이템 타입', on_delete=models.SET_NULL, null=True)
 
     def __str__(self) -> str:
         return self.name
@@ -68,6 +73,20 @@ class ItemInfo(models.Model):
     sellingValue = models.IntegerField(default=0)
     buyingValue = models.IntegerField(default=0)
     exp = models.IntegerField(default=0)
+
+class Building(models.Model):
+    name = models.CharField(verbose_name='이름', max_length=32, primary_key=True)
+    description = models.CharField(verbose_name='설명', max_length=64, blank=True)
+    image_path = models.CharField(verbose_name='이미지 경로', max_length=200, null=True, blank=True)
+    mapID = models.CharField(max_length=45)
+    darkModeYn = models.CharField(max_length=45)
+    sale_items = models.ManyToManyField(Item, verbose_name=f'판매 아이템', blank=True)#, on_delete=models.PROTECT, primary_key=False)
+        
+    def __str__(self) -> str:
+        return self.name
+    class Meta:
+        verbose_name = '건물'
+        verbose_name_plural = verbose_name
 
 class Fish(models.Model):
     fishName = models.CharField(max_length=255)
@@ -123,10 +142,3 @@ class NoneActingObject(models.Model):
     objectName = models.CharField(max_length=45)
     objectType = models.CharField(max_length=45)
     objectEffect = models.CharField(max_length=45)
-
-class Building(models.Model):
-    buildingID = models.CharField(max_length=45, primary_key=True)
-    buildingName = models.CharField(max_length=45)
-    mapID = models.CharField(max_length=45)
-    buildingImgPath = models.CharField(max_length=45)
-    darkModeYn = models.CharField(max_length=45)

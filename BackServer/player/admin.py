@@ -17,7 +17,6 @@ class CharacterAdmin(admin.ModelAdmin):
 
 class InventoryAdmin(admin.ModelAdmin):
     list_display = ['get_nickname', 'usage', 'capacity']
-    # filter_horizontal=('items',)
      
     @admin.display(ordering='character__user__nickname', description='닉네임')
     def get_nickname(self, obj):

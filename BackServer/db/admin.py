@@ -7,12 +7,44 @@ from .models import *
 class SkillAdmin(admin.ModelAdmin):
     list_display = ['name', 'description', 'hp_consumption', 'mp_consumption']
 
+# class ItemstatAdmin(admin.ModelAdmin):
+#     list_display = ['hp', 'mp', 'power']
+
 class ItemtypeAdmin(admin.ModelAdmin):
     list_display = ['name', 'description']
     
 class ItemAdmin(admin.ModelAdmin):
-    list_display = ['name', 'type', 'description', 'purchase_price', 'sell_price', 'weight', 'durability']
+    list_display = ['name', 'type', 'description', 'image_path', 'purchase_price', 'sell_price', 'weight', 'hp', 'mp', 'power']
     search_fields = ['name']
+    ordering = ['name']
+
+    fieldsets = ( # 계정 수정 페이지에 보여질 항목
+        (None, {
+            'fields': (
+                'name',
+                'type',
+                'description',
+                'image_path',
+                'weight',
+        )}), # 최상단에 보여질 필드
+        ('가격 정보', {
+            'fields': (
+                'purchase_price',
+                'sell_price',
+        ),},),
+        ('부가 능력치', {
+            'fields': (
+                'hp',
+                'mp',
+                'power',
+        ),},),
+    )
+
+
+
+class BuildingAdmin(admin.ModelAdmin):
+    list_display = ['name', 'description']
+    filter_horizontal=('sale_items',)
 
 class JobAdmin(admin.ModelAdmin):
     list_display = ['name', 'description']
@@ -35,8 +67,10 @@ class SentenceAdmin(SummernoteModelAdmin):
     
 
 admin.site.register(Skill,    SkillAdmin)
+# admin.site.register(Itemstat, ItemstatAdmin)
 admin.site.register(Itemtype, ItemtypeAdmin)
 admin.site.register(Item,     ItemAdmin)
+admin.site.register(Building, BuildingAdmin)
 admin.site.register(Job,      JobAdmin)
 admin.site.register(Script,   ScriptAdmin)
 admin.site.register(Sentence, SentenceAdmin)
