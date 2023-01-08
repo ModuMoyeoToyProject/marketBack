@@ -29,10 +29,10 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
     cd BackServer # Django 프로젝트 폴더로 이동 후,
     ```
-    하단의 `초기 데이터베이스 백업 및 생성`에서 `Dumpdata로부터 데이터베이스 생성` 실행
+    하단의 [초기 데이터베이스 백업 및 생성](#초기-데이터베이스-백업-및-생성)에서 `Dumpdata로부터 데이터베이스 생성` 실행
 1. IDE에서 Django 서버를 실행시키거나, Bash 터미널에서 수동으로 실행
     ```
-    python manage.py runserver # Django 내장 웹서버 런칭
+    python manage.py runserver 8000 # 8000 포트로 Django 내장 웹서버 런칭
     ```
 
 ### Mac
@@ -56,7 +56,7 @@ back쪽 레파지토리 + 나중에 합칠예정
     ```
     cd BackServer # Django 프로젝트 폴더로 이동 후,
     ```
-    하단의 `초기 데이터베이스 백업 및 생성`에서 `Dumpdata로부터 데이터베이스 생성` 실행
+    하단의 [초기 데이터베이스 백업 및 생성](#초기-데이터베이스-백업-및-생성)에서 `Dumpdata로부터 데이터베이스 생성` 실행
 1. VSCode로부터 Django 내장 웹서버를 런칭한다.
 
 ## 데이터베이스 관리용 Django Admin site
@@ -72,7 +72,7 @@ back쪽 레파지토리 + 나중에 합칠예정
 
 ## 초기 데이터베이스 백업 및 생성
 
-* 데이터베이스 덤프
+### 데이터베이스 덤프
     ```
     python manage.py dumpdata account.user --indent 4 -o account/migrations/init_user.json # Current user data && \
     python manage.py dumpdata auth.group --indent 4 -o account/migrations/init_auth.group.json # Current group data && \
@@ -81,7 +81,7 @@ back쪽 레파지토리 + 나중에 합칠예정
     python manage.py dumpdata player --indent 4 -o player/migrations/dumpdata.json && \
     python manage.py dumpdata system --indent 4 -o system/migrations/dumpdata.json
     ```
-* Dumpdata로부터 데이터베이스 생성
+### Dumpdata로부터 데이터베이스 생성
     ```
     rm db.sqlite3 # Delete current DB && \
     python manage.py makemigrations && \
@@ -93,7 +93,7 @@ back쪽 레파지토리 + 나중에 합칠예정
     python manage.py loaddata player/migrations/dumpdata.json && \
     python manage.py loaddata system/migrations/dumpdata.json
     ```
-* For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)
+### For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)
 
 
 ## Visualize ER-Diagram
