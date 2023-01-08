@@ -73,16 +73,14 @@ back쪽 레파지토리 + 나중에 합칠예정
 ## 초기 데이터베이스 백업 및 생성
 
 ### 데이터베이스 덤프
-    ```
     python manage.py dumpdata account.user --indent 4 -o account/migrations/init_user.json # Current user data && \
     python manage.py dumpdata auth.group --indent 4 -o account/migrations/init_auth.group.json # Current group data && \
     python manage.py dumpdata account.group --indent 4 -o account/migrations/init_account.group.json # Current group data && \
     python manage.py dumpdata db --indent 4 -o db/migrations/dumpdata.json && \
     python manage.py dumpdata player --indent 4 -o player/migrations/dumpdata.json && \
     python manage.py dumpdata system --indent 4 -o system/migrations/dumpdata.json
-    ```
+
 ### Dumpdata로부터 데이터베이스 생성
-    ```
     rm db.sqlite3 # Delete current DB && \
     python manage.py makemigrations && \
     python manage.py migrate # Create empty DB && \
@@ -92,7 +90,7 @@ back쪽 레파지토리 + 나중에 합칠예정
     python manage.py loaddata db/migrations/dumpdata.json && \
     python manage.py loaddata player/migrations/dumpdata.json && \
     python manage.py loaddata system/migrations/dumpdata.json
-    ```
+
 ### For more information, Refer to [dumpdata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#dumpdata) and [loaddata](https://docs.djangoproject.com/en/4.1/ref/django-admin/#loaddata)
 
 
