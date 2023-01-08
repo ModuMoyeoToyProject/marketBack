@@ -112,16 +112,27 @@
     }
 },
 {
+    "model": "db.itemtype",
+    "pk": 6,
+    "fields": {
+        "name": "도구",
+        "description": ""
+    }
+},
+{
     "model": "db.item",
     "pk": 1,
     "fields": {
         "name": "초심자의 방패",
+        "type": 4,
         "description": "초심자가 연습용으로 들고 다니는 방패",
         "purchase_price": 50,
         "sell_price": 30,
         "weight": "20",
-        "durability": "100",
-        "type": 4
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
     }
 },
 {
@@ -129,12 +140,15 @@
     "pk": 2,
     "fields": {
         "name": "초심자의 목도",
+        "type": 4,
         "description": "초심자가 훈련을 목적으로 휘두르는 목도. 나무에 가시가 박혀있는 경우가 있어 주의가 필요하다.",
         "purchase_price": 20,
         "sell_price": 12,
         "weight": "8",
-        "durability": "100",
-        "type": 4
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
     }
 },
 {
@@ -142,12 +156,15 @@
     "pk": 3,
     "fields": {
         "name": "도토리",
+        "type": 3,
         "description": "다람쥐가 나무 위에서 떨어뜨린 도토리. 깨끗하게 손질되어 있다.",
         "purchase_price": 3,
         "sell_price": 1,
         "weight": "1",
-        "durability": "100",
-        "type": 3
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
     }
 },
 {
@@ -155,12 +172,15 @@
     "pk": 4,
     "fields": {
         "name": "토끼고기",
+        "type": 3,
         "description": "토끼를 잡아 가죽을 벗기고 손질을 한 익히지 않은 날고기이다.",
         "purchase_price": 22,
         "sell_price": 15,
         "weight": "6",
-        "durability": "100",
-        "type": 3
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
     }
 },
 {
@@ -168,12 +188,111 @@
     "pk": 5,
     "fields": {
         "name": "노란 비서",
+        "type": 2,
         "description": "무작위로 공간 이동한다. 다만, 어디로 떨어질 지는 운명에 맡겨야 한다.",
         "purchase_price": 16,
         "sell_price": 4,
         "weight": "1",
-        "durability": "100",
-        "type": 2
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
+    }
+},
+{
+    "model": "db.item",
+    "pk": 6,
+    "fields": {
+        "name": "철 가위",
+        "type": 6,
+        "description": "철 덩어리로 만든 싸구려 가위",
+        "purchase_price": 300,
+        "sell_price": 250,
+        "weight": "2",
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
+    }
+},
+{
+    "model": "db.item",
+    "pk": 7,
+    "fields": {
+        "name": "파란 가위",
+        "type": 6,
+        "description": "파란색으로 색상을 입힌 플라스틱 가위.",
+        "purchase_price": 3000,
+        "sell_price": 2500,
+        "weight": "6",
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
+    }
+},
+{
+    "model": "db.item",
+    "pk": 8,
+    "fields": {
+        "name": "금색 가위",
+        "type": 6,
+        "description": "옛 귀족들이 사용했다는 고급진 가위",
+        "purchase_price": 30000,
+        "sell_price": 28000,
+        "weight": "4",
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
+    }
+},
+{
+    "model": "db.item",
+    "pk": 9,
+    "fields": {
+        "name": "쇠 망치",
+        "type": 6,
+        "description": "쇠 덩어리로 만든 무식하게 생긴 망치",
+        "purchase_price": 300,
+        "sell_price": 200,
+        "weight": "25",
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
+    }
+},
+{
+    "model": "db.item",
+    "pk": 10,
+    "fields": {
+        "name": "파란 망치",
+        "type": 6,
+        "description": "파란색 도금이 된 푸르스름한 망치. 맞으면 기절 할 듯이 생겨먹었다.",
+        "purchase_price": 3000,
+        "sell_price": 2000,
+        "weight": "1",
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
+    }
+},
+{
+    "model": "db.item",
+    "pk": 11,
+    "fields": {
+        "name": "금색 망치",
+        "type": 6,
+        "description": "금색 도금이 된 고급진 망치. 금 도금이 벗겨질라 세게 치기가 무섭다.",
+        "purchase_price": 30000,
+        "sell_price": 25000,
+        "weight": "32",
+        "image_path": null,
+        "hp": 0,
+        "mp": 0,
+        "power": 0
     }
 },
 {
