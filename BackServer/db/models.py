@@ -32,18 +32,18 @@ class Job(models.Model):
         verbose_name_plural = verbose_name
 
 class Itemtype(models.Model):
-    name = models.CharField(verbose_name='타입명', max_length=16, primary_key=False)
+    name = models.CharField(verbose_name='분류 명', max_length=16, primary_key=False)
     description = models.CharField(verbose_name='설명', max_length=64, blank=True)
     
     def __str__(self) -> str:
         return self.name
     class Meta:
-        verbose_name = '아이템 타입'
+        verbose_name = '아이템 종류'
         verbose_name_plural = verbose_name
 
 class Item(models.Model):
     name = models.CharField(verbose_name='아이템명', max_length=16, unique=True)
-    type = models.ForeignKey(Itemtype, verbose_name='아이템 타입', on_delete=models.SET_NULL, null=True)
+    type = models.ForeignKey(Itemtype, verbose_name='아이템 종류', on_delete=models.SET_NULL, null=True)
     description = models.CharField(verbose_name='설명', max_length=64, blank=True)
     purchase_price = models.IntegerField(verbose_name='구입 가격 (냥)', default=0)
     sell_price = models.IntegerField(verbose_name='판매 가격 (냥)', default=0)
