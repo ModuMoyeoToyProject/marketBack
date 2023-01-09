@@ -601,7 +601,7 @@
         "type": 1,
         "description": "첫 스타팅 포인트",
         "required_level": 1,
-        "image_path": null,
+        "image_path": "../img/central_square.png",
         "width": 100,
         "height": 100,
         "location": null,
