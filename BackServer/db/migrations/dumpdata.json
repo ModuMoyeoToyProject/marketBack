@@ -296,6 +296,24 @@
     }
 },
 {
+    "model": "db.building",
+    "pk": "철물점",
+    "fields": {
+        "description": "농사에 필요한 공구를 구입하거나 팔 수 있다.",
+        "image_path": "./img/hardware_owner.jpeg",
+        "mapID": "1",
+        "darkModeYn": "1",
+        "sale_items": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    }
+},
+{
     "model": "db.script",
     "pk": 1,
     "fields": {
