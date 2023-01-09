@@ -26,7 +26,7 @@ class InventoryAdmin(admin.ModelAdmin):
         model=ItemAmount
         extra=0
         autocomplete_fields = ['item']
-        verbose_name = "보유 아이템"
+        verbose_name = '보유 아이템'
         verbose_name_plural = verbose_name
     inlines = [ItemAmountInline]
 

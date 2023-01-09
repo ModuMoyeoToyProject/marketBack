@@ -1,14 +1,70 @@
 [
 {
+    "model": "system.garnish",
+    "pk": "참나무1",
+    "fields": {
+        "description": "울타리가 쳐져 있지 않아 벨 수 있겠다",
+        "image_path": null
+    }
+},
+{
+    "model": "system.garnish",
+    "pk": "참나무2",
+    "fields": {
+        "description": "울타리가 쳐져 있지 않아 벨 수 있겠다",
+        "image_path": null
+    }
+},
+{
+    "model": "system.garnish",
+    "pk": "참나무3",
+    "fields": {
+        "description": "울타리가 쳐져 있지 않아 벨 수 있겠다",
+        "image_path": null
+    }
+},
+{
+    "model": "system.maptype",
+    "pk": 1,
+    "fields": {
+        "name": "오리지널",
+        "description": "시장놀이 기본 컨셉"
+    }
+},
+{
+    "model": "system.maptype",
+    "pk": 2,
+    "fields": {
+        "name": "확장판",
+        "description": "추가 맵"
+    }
+},
+{
+    "model": "system.maptype",
+    "pk": 3,
+    "fields": {
+        "name": "확장판_실내",
+        "description": ""
+    }
+},
+{
     "model": "system.map",
     "pk": 1,
     "fields": {
         "name": "🏡집",
-        "description": "",
+        "type": 3,
+        "description": "흙수저 마녀의 집",
         "required_level": 1,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "0,0",
-        "street": "1,0"
+        "street": "1,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -16,11 +72,19 @@
     "pk": 2,
     "fields": {
         "name": "⛰마녀의 숲",
-        "description": "",
+        "type": 2,
+        "description": "흙수저 마녀가 사는 숲",
         "required_level": 1,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "0,1",
-        "street": "1,0"
+        "street": "1,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -28,11 +92,19 @@
     "pk": 3,
     "fields": {
         "name": "🏞가파른 계곡",
+        "type": null,
         "description": "",
         "required_level": 1,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "0,2",
-        "street": "1,1"
+        "street": "1,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -40,11 +112,19 @@
     "pk": 4,
     "fields": {
         "name": "🧙그리무츠의 동굴",
-        "description": "",
+        "type": 2,
+        "description": "도보코스 괴물, 그림미무츠의 형상을 닮은 동굴이다. 형상이 꽤나 사납다.",
         "required_level": 1,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "0,3",
-        "street": "0,0"
+        "street": "0,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -52,11 +132,19 @@
     "pk": 5,
     "fields": {
         "name": "👨‍👩‍👧‍👦슈비즈 마을",
-        "description": "",
+        "type": 2,
+        "description": "척박하고 추운 마을이다. 찬바람이 많이 불어 왠만해서는 다들 이 곳에서 살려고 하지 않는다.",
         "required_level": 2,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "1,2",
-        "street": "0,1"
+        "street": "0,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -64,11 +152,19 @@
     "pk": 6,
     "fields": {
         "name": "🏞칼바람이 부는 언덕",
+        "type": null,
         "description": "",
         "required_level": 2,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "2,2",
-        "street": "0,1"
+        "street": "0,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -76,11 +172,19 @@
     "pk": 7,
     "fields": {
         "name": "⛰석양이 지는 숲",
-        "description": "",
+        "type": 2,
+        "description": "몬스터가 자주 출몰하는 곳이므로 마음 단단히 먹고 지나가야 한다.",
         "required_level": 2,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "2,1",
-        "street": "1,0"
+        "street": "1,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -88,11 +192,19 @@
     "pk": 8,
     "fields": {
         "name": "🧙이그스의 호수",
-        "description": "",
+        "type": 2,
+        "description": "이 호수에는 부라췌-알-이그스라는 괴물이 산다고 하는 전설이 있다. 하지만 직접 본 사람은 없다고 한다.",
         "required_level": 2,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "2,0",
-        "street": "1,0"
+        "street": "1,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -100,11 +212,19 @@
     "pk": 9,
     "fields": {
         "name": "👨‍👩‍👧‍👦오르메인 마을",
-        "description": "",
+        "type": 2,
+        "description": "주위에 호수가 있어서 농사를 짓기에 좋은 마을이다. 마을을 내려다보면 생기가 돋는다.",
         "required_level": 3,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "3,2",
-        "street": "1,0"
+        "street": "1,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -112,11 +232,19 @@
     "pk": 10,
     "fields": {
         "name": "🏞프레이스 들판지대",
+        "type": null,
         "description": "",
         "required_level": 3,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "3,3",
-        "street": "0,0"
+        "street": "0,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -124,11 +252,19 @@
     "pk": 11,
     "fields": {
         "name": "🏰소리드 제 1성막",
+        "type": null,
         "description": "",
         "required_level": 4,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "2,3",
-        "street": "1,1"
+        "street": "1,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -136,11 +272,19 @@
     "pk": 12,
     "fields": {
         "name": "🏰블레니오 성",
-        "description": "",
+        "type": 2,
+        "description": "행정 도시 역할을 겸하는 오래된 성. 사람들이 많아 다소 혼잡하기도 하다.",
         "required_level": 4,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "2,4",
-        "street": "1,1"
+        "street": "1,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -148,11 +292,19 @@
     "pk": 13,
     "fields": {
         "name": "🏰블렌 경비대",
+        "type": null,
         "description": "",
         "required_level": 4,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "3,4",
-        "street": "0,0"
+        "street": "0,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -160,11 +312,19 @@
     "pk": 14,
     "fields": {
         "name": "🏰소리드 제 2성막",
+        "type": null,
         "description": "",
         "required_level": 4,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "2,5",
-        "street": "1,1"
+        "street": "1,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -172,11 +332,19 @@
     "pk": 15,
     "fields": {
         "name": "🏞셀루우즈 곡창지대",
+        "type": null,
         "description": "",
         "required_level": 5,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "3,5",
-        "street": "0,1"
+        "street": "0,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -184,11 +352,19 @@
     "pk": 16,
     "fields": {
         "name": "🏜카바스 사막",
+        "type": null,
         "description": "",
         "required_level": 5,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "4,5",
-        "street": "1,0"
+        "street": "1,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -196,11 +372,19 @@
     "pk": 17,
     "fields": {
         "name": "🏝오아시스",
+        "type": null,
         "description": "",
         "required_level": 5,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "4,6",
-        "street": "1,1"
+        "street": "1,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -208,11 +392,19 @@
     "pk": 18,
     "fields": {
         "name": "🧙환각의 피라미드",
+        "type": null,
         "description": "",
         "required_level": 5,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "5,6",
-        "street": "0,0"
+        "street": "0,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -220,11 +412,19 @@
     "pk": 19,
     "fields": {
         "name": "🏰리우센 성지",
-        "description": "",
+        "type": 2,
+        "description": "성곽에서 사막 쪽을 바라보면 하얀색 로브를 걸치고 사막을 걸어다니는 사제들이 보인다.",
         "required_level": 5,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "4,7",
-        "street": "0,0"
+        "street": "0,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -232,11 +432,19 @@
     "pk": 20,
     "fields": {
         "name": "🌊코나 강",
+        "type": null,
         "description": "",
         "required_level": 6,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "2,6",
-        "street": "0,0"
+        "street": "0,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -244,11 +452,19 @@
     "pk": 21,
     "fields": {
         "name": "👨‍👩‍👧‍👦테제인 산업지구",
-        "description": "",
+        "type": 2,
+        "description": "가장 선진화된 문명을 이루고 있는 산업 단지",
         "required_level": 6,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "1,6",
-        "street": "0,1"
+        "street": "0,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -256,11 +472,19 @@
     "pk": 22,
     "fields": {
         "name": "💂‍♂️포스페어 거리",
+        "type": null,
         "description": "",
         "required_level": 6,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "0,6",
-        "street": "1,1"
+        "street": "1,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -268,11 +492,19 @@
     "pk": 23,
     "fields": {
         "name": "🧙소티에즈 골목",
+        "type": null,
         "description": "",
         "required_level": 6,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "0,5",
-        "street": "1,0"
+        "street": "1,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -280,11 +512,19 @@
     "pk": 24,
     "fields": {
         "name": "🧙미케니의 길",
+        "type": null,
         "description": "",
         "required_level": 6,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "-1,6",
-        "street": "0,1"
+        "street": "0,1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 },
 {
@@ -292,11 +532,79 @@
     "pk": 25,
     "fields": {
         "name": "🧙데바트 동굴",
+        "type": null,
         "description": "",
         "required_level": 6,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
         "location": null,
         "coordinate": "0,7",
-        "street": "0,0"
+        "street": "0,0",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
+    }
+},
+{
+    "model": "system.map",
+    "pk": 26,
+    "fields": {
+        "name": "마을 뒷산",
+        "type": 1,
+        "description": "",
+        "required_level": 1,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
+        "location": null,
+        "coordinate": "1",
+        "street": "1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
+    }
+},
+{
+    "model": "system.map",
+    "pk": 27,
+    "fields": {
+        "name": "중앙 광장",
+        "type": 1,
+        "description": "첫 스타팅 포인트",
+        "required_level": 1,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
+        "location": null,
+        "coordinate": "1",
+        "street": "1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
+    }
+},
+{
+    "model": "system.map",
+    "pk": 28,
+    "fields": {
+        "name": "상점가",
+        "type": 1,
+        "description": "",
+        "required_level": 1,
+        "image_path": null,
+        "width": 100,
+        "height": 100,
+        "location": null,
+        "coordinate": "1",
+        "street": "1",
+        "east_map": null,
+        "west_map": null,
+        "south_map": null,
+        "north_map": null
     }
 }
 ]
