@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 from django.core.validators import MinValueValidator, MaxValueValidator
 from account.models import *
 from db.models import *
+from system.models import *
 
 
 class Character(models.Model):
@@ -13,7 +14,10 @@ class Character(models.Model):
     # statusID = models.CharField(max_length=45, default=1)
     # jobID = models.CharField(max_length=45, default=1)
     # title = models.CharField(max_length=45, default=1) # ??
-    location = models.CharField(max_length=255, default='location')
+    map = models.ForeignKey(Map, verbose_name='현재 맵', to_field='name', default='중앙 광장', on_delete=models.SET_NULL, null=True)
+    x = models.IntegerField(verbose_name='X 좌표 위치', default=0)
+    y = models.IntegerField(verbose_name='Y 좌표 위치', default=0)
+    z = models.IntegerField(verbose_name='Z 순서', default=0)
 
     def __str__(self) -> str:
         return self.user.nickname

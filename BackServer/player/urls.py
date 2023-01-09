@@ -1,8 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
+from .views import *
 from . import views
 
 urlpatterns = [
+    path('', PlayerView.as_view()),
     path('action/hunting', views.player_hunting),
     path('action/harvesting', views.player_harvesting),
     path('action/taming', views.player_taming),
