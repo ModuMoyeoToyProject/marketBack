@@ -118,5 +118,25 @@
         "groups": [],
         "user_permissions": []
     }
+},
+{
+    "model": "account.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$zORcjlmlXXq5gHJQZ9gPbw$rhc2F04Xb7xuzSmSXo+ead/FO1sCGCa7ou10u8ZsQlo=",
+        "last_login": "2023-01-09T14:36:26Z",
+        "is_superuser": false,
+        "username": "b",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-01-09T14:36:26Z",
+        "nickname": "빌런",
+        "email": "foo@bar.com",
+        "gender": false,
+        "picture": "",
+        "status_message": null,
+        "groups": [],
+        "user_permissions": []
+    }
 }
 ]
