@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-)8ovo-j5f$%5(9pw6k+yv&4u2wwg5$o-0$ldiwv)=*1$p_523k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'testdrive.loopback.kr']
 
 
 # Application definition
@@ -141,12 +141,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+# STATIC_ROOT = join(BASE_DIR, 'static/')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = ['https://testdrive.loopback.kr']
 # CORS_ALLOWED_ORIGINS = [
 # 	# 허용할 Origin 추가
 #     "https://example.com",
