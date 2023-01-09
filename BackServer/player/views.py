@@ -1,9 +1,25 @@
+from django.views.generic import View
+from django.http import JsonResponse, HttpResponse, response
+from django.core import serializers
 from django.shortcuts import render
-from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from player.models import *
 from .models import *
 from db.models import ItemInfo, Item, Seed
 import json
+
+
+class PlayerView(View):
+    def get(self, request):
+        character = Character.objects.get(id=2)
+        user = User.objects.get(character=character)
+        map = Map.objects.get(name=character.map)
+        response = dict()
+        response['user'] = {'nickname': user.nickname}
+        response['character'] = json.loads(serializers.serialize('json', [character,]))[0]
+        response['map'] = json.loads(serializers.serialize('json', [map,]))[0]
+        return JsonResponse(response)
+
 
 def player_hunting(request):
     #이벤트 종료 후 아이템 추가

@@ -37,7 +37,7 @@ class Maptype(models.Model):
 
 class Map(models.Model):
     # mapID = models.IntegerField() # 내장 id Primary key로 대체
-    name = models.CharField(verbose_name='이름', null=True, max_length=32)
+    name = models.CharField(verbose_name='이름', max_length=32, unique=True)
     type = models.ForeignKey(Maptype, verbose_name='종류', on_delete=models.SET_NULL, null=True)
     description = models.CharField(verbose_name='설명', max_length=64, blank=True)
     required_level = models.IntegerField(verbose_name='진입 요구 레벨 (1~100)', default=1, validators=[MinValueValidator(1), MaxValueValidator(100)]) # TODO Character의 level과 minmax를 공유하므로, 좀 더 전역적인 상수 선언 테이블이 필요할수도?
@@ -46,6 +46,7 @@ class Map(models.Model):
     height = models.IntegerField(verbose_name='높이', default=100, validators=[MinValueValidator(100), MaxValueValidator(1000)])
     location = models.CharField(max_length=255, null=True, blank=True) # TODO location? 용도가?
     coordinate = models.CharField(verbose_name='좌표', max_length=255, null=True, blank=True) # TODO 어떻게 활용되는지?
+    darkmodeYn = models.IntegerField(null=True, blank=True)
     street = models.CharField(max_length=255, null=True, blank=True) # TODO 용도가?
     garnishes = models.ManyToManyField(Garnish, through=GarnishArrangement, verbose_name='장식물 배치', blank=True)#, on_delete=models.PROTECT, primary_key=False)
     east_map = models.OneToOneField('Map', verbose_name='동쪽으로 향하는 맵', related_name='east_map_of', null=True, blank=True, on_delete=models.PROTECT)
