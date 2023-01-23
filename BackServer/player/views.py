@@ -1,24 +1,57 @@
 from django.views.generic import View
 from django.http import JsonResponse, HttpResponse, response
 from django.core import serializers
+from rest_framework import serializers as drf_serializers
+from rest_framework.serializers import ModelSerializer
+from rest_framework import viewsets
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from player.models import *
 from .models import *
 from db.models import ItemInfo, Item, Seed
+from django.conf import settings
 import json
+from .serializers import *
 
 
-class PlayerView(View):
+class CharacterViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Character.objects.all()
+    serializer_class = CharacterSerializer
+class InventoryViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Inventory.objects.all()
+    serializer_class = InventorySerializer
+
+
+
+
+class CharacterView(View):
     def get(self, request):
+        response = dict()
         character = Character.objects.get(id=2)
         user = User.objects.get(character=character)
-        map = Map.objects.get(name=character.map)
-        response = dict()
         response['user'] = {'nickname': user.nickname}
         response['character'] = json.loads(serializers.serialize('json', [character,]))[0]
-        response['map'] = json.loads(serializers.serialize('json', [map,]))[0]
         return JsonResponse(response)
+
+
+
+
+class MapView(View):
+    def get(self, request):
+        try:
+            response = dict()
+            character = Character.objects.get(id=2)
+            map = Map.objects.get(name=character.map)
+            response['map'] = json.loads(serializers.serialize('json', [map,]))[0]
+            # return JsonResponse(response)
+            return HttpResponse(json.dumps({'response':'success',
+                                                'monthly_schedule' : map}))
+        except Exception as e:
+            return HttpResponse(json.dumps(
+                {'response': e}
+            if settings.DEBUG else
+                {'response': 'Failed'})
+            )
 
 
 def player_hunting(request):

@@ -4,7 +4,20 @@ from django.http import JsonResponse
 from django.contrib import auth
 from player.models import *
 from .models import *
+from .serializers import *
+from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
+from rest_framework.permissions import IsAuthenticated
 
+
+class UserViewSet(ModelViewSet):
+    queryset = User.objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]
+
+class GroupViewSet(ModelViewSet):
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
+    permission_classes = [IsAuthenticated]
 
 def create_charactor(user):
     character = Character(user=user)
