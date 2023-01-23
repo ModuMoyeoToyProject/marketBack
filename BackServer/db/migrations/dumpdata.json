@@ -209,7 +209,7 @@
         "purchase_price": 300,
         "sell_price": 250,
         "weight": "2",
-        "image_path": null,
+        "image_path": "../img/iron_scissor.png",
         "hp": 0,
         "mp": 0,
         "power": 0
@@ -225,7 +225,7 @@
         "purchase_price": 3000,
         "sell_price": 2500,
         "weight": "6",
-        "image_path": null,
+        "image_path": "../img/blue_scissor.png",
         "hp": 0,
         "mp": 0,
         "power": 0
@@ -241,7 +241,7 @@
         "purchase_price": 30000,
         "sell_price": 28000,
         "weight": "4",
-        "image_path": null,
+        "image_path": "../img/gold_scissor.jpeg",
         "hp": 0,
         "mp": 0,
         "power": 0
@@ -251,13 +251,13 @@
     "model": "db.item",
     "pk": 9,
     "fields": {
-        "name": "쇠 망치",
+        "name": "철 망치",
         "type": 6,
-        "description": "쇠 덩어리로 만든 무식하게 생긴 망치",
+        "description": "철(?)로 만든 무식하게 생긴 망치",
         "purchase_price": 300,
         "sell_price": 200,
         "weight": "25",
-        "image_path": null,
+        "image_path": "../img/iron_hammer.png",
         "hp": 0,
         "mp": 0,
         "power": 0
@@ -273,7 +273,7 @@
         "purchase_price": 3000,
         "sell_price": 2000,
         "weight": "1",
-        "image_path": null,
+        "image_path": "../img/blue_hammer.jpeg",
         "hp": 0,
         "mp": 0,
         "power": 0
@@ -289,7 +289,7 @@
         "purchase_price": 30000,
         "sell_price": 25000,
         "weight": "32",
-        "image_path": null,
+        "image_path": "../img/gold_hammer.jpeg",
         "hp": 0,
         "mp": 0,
         "power": 0

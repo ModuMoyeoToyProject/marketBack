@@ -307,5 +307,14 @@
         "item": 4,
         "item_amount": 1
     }
+},
+{
+    "model": "player.itemamount",
+    "pk": 8,
+    "fields": {
+        "inventory": 6,
+        "item": 7,
+        "item_amount": 5
+    }
 }
 ]
